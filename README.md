@@ -1,39 +1,52 @@
-# Sebastian Vaskes Pimentel
+<p align="center">
+  <img src="assets/profile-header.svg" alt="Sebastian Vaskes Pimentel — Data Engineering · Software · Analytics · Applied AI" width="100%"/>
+</p>
 
-**Data Engineering · Software · Analytics**
+## About
 
-I build data systems that turn messy operational information into structured, validated, usable data.
+I build data systems that turn messy operational information into structured,
+validated, usable data. My work spans Python, SQL, ingestion pipelines,
+analytics, automation, and applied AI — I care most about engineering that
+stays close to real business problems.
 
-My work spans Python, SQL, ingestion/ETL, analytics, automation, and applied AI — focused on systems that stay close to real business problems.
-
-`Python` · `SQL` · `Data Pipelines` · `Applied AI`
-
----
-
-## Featured Work
+## Featured work
 
 ### [Commerce Data Platform](https://github.com/sebmvp/commerce-data-platform)
+`Python · DuckDB · FastAPI · Docker · pytest · GitHub Actions`
 
-`Python` · `DuckDB` · `FastAPI` · `Docker` · `pytest` · `GitHub Actions`
+Reproducible operational data platform for resale commerce: a five-schema
+warehouse fed by eight validated, idempotent ingestion streams — SCD-2
+dimensions, event-sourced item state, per-run audit history, and a quarantine
+table for every rejected record. Served through a CLI, analytics views, and a
+FastAPI read layer. One `docker compose up` stands the whole thing up; CI
+rebuilds it from scratch on every push.
 
-Operational data platform with idempotent ingestion, historical modeling, validation/quarantine, ingest auditing, analytics views, and a reproducible synthetic demo.
+### [Enterprise RAG Data Pipeline — Technical Case Study](https://github.com/sebmvp/rag-pipeline-case-study)
+`Python · JSON/JSONL · Entity Resolution · Pinecone · Data Quality · RAG`
 
-### [Enterprise RAG Data Pipeline](https://github.com/sebmvp/enterprise-rag-data-pipeline)
+Sanitized technical case study of the data pipeline I developed during my AI
+internship at Harpak-ULMA Packaging: heterogeneous document ingestion, metadata
+normalization, machine/entity matching, provenance tracking, validation gates,
+chunking, and retrieval-ready vector records. All code is clean-room and all
+data synthetic — no proprietary material.
 
-`Python` · `Data Pipelines` · `Entity Resolution` · `Pinecone` · `RAG`
+### Open source
+Currently contributing to document/data tooling. Merged work will appear here.
 
-Sanitized case study of the enterprise data pipeline I developed during my Harpak-ULMA AI internship: heterogeneous document ingestion, metadata normalization, machine/serial entity resolution, provenance, validation, chunking, and retrieval preparation.
+## Technical focus
 
-### Open Source
+**Data** — Python · SQL · pandas · DuckDB · relational modeling · ETL/ELT
+**Engineering** — Docker · Git · pytest · GitHub Actions · FastAPI · Linux
+**Applied AI** — RAG · embeddings · vector retrieval · Pinecone
 
-Open-source document/data tooling contribution in progress — I'll link the first merged PR here.
+## Current
 
----
+- M.S. Business Analytics (Data Analytics track) — UMass Amherst Isenberg, expected Dec 2027
+- B.S. Informatics (Data Science), CS minor — UMass Amherst, May 2026
+- Building [commerce-data-platform](https://github.com/sebmvp/commerce-data-platform)
+- Deepening SQL / Python / data-engineering fundamentals; contributing to open-source data tooling
 
-## Education
+## Contact
 
-B.S. Informatics (Data Science), UMass Manning CICS → M.S. Business Analytics (Data Analytics), UMass Isenberg.
-
----
-
-<sub>Currently: deepening data-platform engineering and working toward forward-deployed / implementation-oriented data roles.</sub>
+- LinkedIn: [linkedin.com/in/sebastian-vaskes-pimentel](https://www.linkedin.com/in/sebastian-vaskes-pimentel)
+- Email: [sebavaspim@gmail.com](mailto:sebavaspim@gmail.com)
