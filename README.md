@@ -3,12 +3,6 @@
 Data and software-focused engineer working across Python, SQL, data pipelines,
 analytics, and applied AI.
 
-Currently pursuing an M.S. in Business Analytics at UMass Isenberg after
-completing a B.S. in Informatics (Data Science concentration) at UMass Manning
-CICS. I like taking messy operational data — manifests, marketplace exports,
-shipment logs — and turning it into systems that are reproducible, validated,
-and auditable.
-
 ## Featured work
 
 ### [Commerce Data Platform](https://github.com/sebmvp/commerce-data-platform)
