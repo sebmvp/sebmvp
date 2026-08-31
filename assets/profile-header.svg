@@ -30,7 +30,7 @@
 
   <text x="48" y="120" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="600" fill="#39d0c4" letter-spacing="0.5">Data Engineering  ·  Software  ·  Analytics  ·  Applied AI</text>
 
-  <text x="48" y="148" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13.5" fill="#8b98a5" letter-spacing="0.4">Python · SQL · Data Pipelines · Data Quality · Automation</text>
+  <text x="48" y="148" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13.5" fill="#8b98a5" letter-spacing="0.4">Python · SQL · Data Pipelines · Applied AI</text>
 
-  <text x="188" y="164" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#54646f" transform="translate(140,0)">UMass Manning CICS → UMass Isenberg · M.S. Business Analytics</text>
+  <text x="812" y="47" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#54646f">UMass Manning CICS → UMass Isenberg</text>
 </svg>
