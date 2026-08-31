@@ -48,5 +48,5 @@ Currently contributing to document/data tooling. Merged work will appear here.
 
 ## Contact
 
-- LinkedIn: [linkedin.com/in/sebastian-vaskes-pimentel](https://www.linkedin.com/in/sebastian-vaskes-pimentel)
+- LinkedIn: [linkedin.com/in/sebastianvaskes](https://www.linkedin.com/in/sebastianvaskes)
 - Email: [sebavaspim@gmail.com](mailto:sebavaspim@gmail.com)
