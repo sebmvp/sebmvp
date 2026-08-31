@@ -1,18 +1,39 @@
 # Sebastian Vaskes Pimentel
 
-Data and software-focused engineer working across Python, SQL, data pipelines,
-analytics, and applied AI.
+**Data Engineering · Software · Analytics**
 
-## Featured work
+I build data systems that turn messy operational information into structured, validated, usable data.
+
+My work spans Python, SQL, ingestion/ETL, analytics, automation, and applied AI — focused on systems that stay close to real business problems.
+
+`Python` · `SQL` · `Data Pipelines` · `Applied AI`
+
+---
+
+## Featured Work
 
 ### [Commerce Data Platform](https://github.com/sebmvp/commerce-data-platform)
-Reproducible Python + DuckDB data platform for commerce operations: multi-schema
-warehouse design, validated idempotent ingestion (SCD-2 dims, event-sourced item
-state, audit/quarantine of every run and rejected row), analytics views, an
-optional FastAPI read layer, Docker one-command setup, and CI covering the full
-build-from-scratch path.
 
-### Enterprise RAG Data Pipeline — Technical Case Study
-Sanitized case study of document ingestion, metadata enrichment, embeddings,
-data-quality gates, and vector retrieval built during my AI internship at
-Harpak-ULMA Packaging.
+`Python` · `DuckDB` · `FastAPI` · `Docker` · `pytest` · `GitHub Actions`
+
+Operational data platform with idempotent ingestion, historical modeling, validation/quarantine, ingest auditing, analytics views, and a reproducible synthetic demo.
+
+### [Enterprise RAG Data Pipeline](https://github.com/sebmvp/enterprise-rag-data-pipeline)
+
+`Python` · `Data Pipelines` · `Entity Resolution` · `Pinecone` · `RAG`
+
+Sanitized case study of the enterprise data pipeline I developed during my Harpak-ULMA AI internship: heterogeneous document ingestion, metadata normalization, machine/serial entity resolution, provenance, validation, chunking, and retrieval preparation.
+
+### Open Source
+
+Open-source document/data tooling contribution in progress — I'll link the first merged PR here.
+
+---
+
+## Education
+
+B.S. Informatics (Data Science), UMass Manning CICS → M.S. Business Analytics (Data Analytics), UMass Isenberg.
+
+---
+
+<sub>Currently: deepening data-platform engineering and working toward forward-deployed / implementation-oriented data roles.</sub>
