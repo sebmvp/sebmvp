@@ -1,38 +1,38 @@
 <p align="center">
-  <img src="assets/profile-header.svg" alt="Sebastian Vaskes Pimentel — Data Engineering · Software · Analytics" width="100%"/>
+  <img src="assets/profile-header.svg" alt="Sebastian Vaskes Pimentel — building systems for messy data" width="100%"/>
 </p>
 
-## About
+I like taking messy information and figuring out how to make it usable. Most of what I build sits somewhere between data engineering, automation, analytics, and applied AI — and I care that the systems can be rerun, inspected, and explained when something goes wrong. A pipeline you can't rerun safely is a liability with a scheduler.
 
-I build data systems that turn messy operational information into structured, validated, usable data. My work spans Python, SQL, ingestion/ETL, analytics, automation, and applied AI, with an emphasis on systems close to real business problems.
+## Selected work
 
-## Featured Work
+<a href="https://github.com/sebmvp/commerce-data-platform">
+  <img src="assets/card-commerce.svg" alt="Commerce Data Platform — validated ingest, safe reruns, quarantine, audit" width="420"/>
+</a>
+<a href="https://github.com/sebmvp/enterprise-rag-data-pipeline">
+  <img src="assets/card-harpak.svg" alt="Enterprise RAG Data Pipeline — metadata normalization, entity resolution, provenance" width="420"/>
+</a>
+<a href="https://github.com/sebmvp/macro-asset-stress-modeling">
+  <img src="assets/card-macro.svg" alt="Macro Stress & Asset Behavior — gold vs. bitcoin as safe havens under market stress" width="420"/>
+</a>
 
-### [Commerce Data Platform](https://github.com/sebmvp/commerce-data-platform)
-`Python · DuckDB · FastAPI · Docker · pytest · GitHub Actions`
+**[Commerce Data Platform](https://github.com/sebmvp/commerce-data-platform)** — a data platform built around resale-commerce operations. The interesting engineering is the ingest lifecycle: content-hash change detection makes builds rerun-safe, Pydantic validation quarantines bad records instead of dropping them, every run writes an audit record, and SCD-2 + event-sourced modeling keeps historical state queryable. `docker compose up` rebuilds the whole warehouse from bundled synthetic data; CI does the same on every push.
 
-Operational data platform with idempotent ingestion, historical modeling (SCD-2 + event-sourced item state), validation/quarantine, per-run ingest auditing, analytics views, and a FastAPI read layer. One `docker compose up` stands up a reproducible demo; CI rebuilds the warehouse from scratch on every push.
+**[Enterprise RAG Data Pipeline](https://github.com/sebmvp/enterprise-rag-data-pipeline)** — a sanitized case study of my Harpak-ULMA internship work. I owned the offline side of a retrieval system: turning inconsistent company documents and equipment metadata into structured, validated records — controlled schemas, layered exact/regex/fuzzy matching, provenance on every record — so the downstream system could answer questions about the right machine.
 
-### [Enterprise RAG Data Pipeline](https://github.com/sebmvp/enterprise-rag-data-pipeline)
-`Python · Data Pipelines · Entity Resolution · Pinecone · RAG`
+**[Macro Stress & Asset Behavior](https://github.com/sebmvp/macro-asset-stress-modeling)** — group research, not an engineering platform: when markets get stressed, does Gold actually protect you, and does Bitcoin behave anything like it? 4,150 daily observations, stress regimes, chronological modeling, walk-forward validation. Gold is a *conditional* safe haven; Bitcoin is not digital gold; and the MLP we trained failed in a way that taught us more than the models that worked.
 
-Sanitized case study of the enterprise data pipeline I developed during my Harpak-ULMA internship: document ingestion, metadata normalization, machine/serial entity resolution, provenance, validation, chunking, and retrieval preparation.
+## Currently
 
-### Open Source
+- polishing the commerce platform
+- turning the macro project into a reproducible public writeup
+- looking for a useful contribution in document/data tooling
 
-Open-source document/data tooling contribution in progress.
+## Off keyboard
 
-## Education
+Usually reading, training, traveling, or automating something that probably didn't need automating.
 
-B.S. Informatics (Data Science), UMass Manning CICS → M.S. Business Analytics (Data Analytics), UMass Isenberg
+## Find me
 
-## Technical Focus
-
-**Data** — Python · SQL · pandas · DuckDB · relational modeling · ETL/ELT
-**Engineering** — FastAPI · Docker · Git · pytest · GitHub Actions · Linux
-**Applied AI** — RAG · embeddings · vector retrieval · Pinecone
-
-## Contact
-
-- LinkedIn: [linkedin.com/in/sebastianvaskes](https://www.linkedin.com/in/sebastianvaskes)
-- Email: [sebavaspim@gmail.com](mailto:sebavaspim@gmail.com)
+- [linkedin.com/in/sebastianvaskes](https://www.linkedin.com/in/sebastianvaskes)
+- [sebavaspim@gmail.com](mailto:sebavaspim@gmail.com)
