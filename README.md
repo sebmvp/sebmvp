@@ -2,7 +2,7 @@
   <img src="assets/profile-header.svg" alt="Sebastian Vaskes Pimentel — building systems for messy data" width="100%"/>
 </p>
 
-I like taking messy information and figuring out how to make it usable. Most of what I build sits somewhere between data engineering, automation, analytics, and applied AI — and I care that the systems can be rerun, inspected, and explained when something goes wrong. A pipeline you can't rerun safely is a liability with a scheduler.
+I like taking messy information and figuring out how to make it usable. Most of what I build sits somewhere between data engineering, automation, analytics, and applied AI. I care that the systems can be rerun, inspected, and explained when something goes wrong. A pipeline you can't rerun safely is a liability with a scheduler.
 
 ## Selected work
 
