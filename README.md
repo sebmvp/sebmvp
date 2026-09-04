@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile-header.svg" alt="Seb — building systems for messy data" width="100%"/>
+  <img src="assets/profile-header.svg" alt="Seb" width="100%"/>
 </p>
 
 A pipeline you can't rerun safely is a liability with a scheduler.
@@ -20,7 +20,7 @@ A pipeline you can't rerun safely is a liability with a scheduler.
 
 **[Enterprise RAG Data Pipeline](https://github.com/sebmvp/enterprise-rag-data-pipeline)** — Harpak-ULMA internship case study. I owned the offline side: inconsistent documents and equipment metadata into structured, validated records with provenance. Not the production retrieval app.
 
-**[Macro Stress & Asset Behavior](https://github.com/sebmvp/macro-asset-stress-modeling)** — group research, CompSci 390B. Gold is a conditional safe haven; Bitcoin is not digital gold. I worked on model design, training, evaluation, and comparison.
+**[Macro Stress & Asset Behavior](https://github.com/sebmvp/macro-asset-stress-modeling)** — CompSci 390B research. Gold is a conditional safe haven; Bitcoin is not digital gold. I worked on model design, training, evaluation, and comparison.
 
 ## Currently
 

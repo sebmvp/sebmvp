@@ -1,11 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="152" viewBox="0 0 860 152" role="img" aria-label="Seb — building systems for messy data">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="152" viewBox="0 0 860 152" role="img" aria-label="Seb">
   <rect width="860" height="152" rx="8" fill="#0c0b12"/>
   <rect width="860" height="152" rx="8" fill="none" stroke="#2c2838" stroke-width="1"/>
 
-  <text x="36" y="58" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="36" font-weight="600" fill="#f2f0f7" letter-spacing="-0.8">Seb</text>
-  <text x="36" y="86" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="500" fill="#a78bfa">building systems for messy data</text>
-  <text x="36" y="114" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#8a8498">python / sql / pipelines / retrieval / automation</text>
-  <text x="36" y="134" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#8a8498"><tspan fill="#8b5cf6">›</tspan> currently: making data easier to trust</text>
+  <text x="36" y="64" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="36" font-weight="600" fill="#f2f0f7" letter-spacing="-0.8">Seb</text>
+  <text x="36" y="100" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#8a8498">python / sql / pipelines / retrieval / automation</text>
+  <text x="36" y="124" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#8a8498"><tspan fill="#8b5cf6">›</tspan> currently: making data easier to trust</text>
 
   <g fill="#8b5cf6" transform="translate(724, 36)">
     <rect x="0" y="8" width="10" height="10" rx="1" opacity="0.45"/>

@@ -2,7 +2,7 @@
   <rect width="420" height="120" rx="8" fill="#0c0b12"/>
   <rect width="420" height="120" rx="8" fill="none" stroke="#2c2838" stroke-width="1"/>
 
-  <text x="22" y="32" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#8a8498" letter-spacing="1.6">RESEARCH · GROUP PROJECT</text>
+  <text x="22" y="32" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#8a8498" letter-spacing="1.6">RESEARCH</text>
   <text x="22" y="58" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#f2f0f7">Macro Stress &amp; Asset Behavior</text>
   <text x="22" y="80" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" fill="#8a8498">gold vs. bitcoin under market stress</text>
 
