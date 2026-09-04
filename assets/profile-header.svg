@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="188" viewBox="0 0 860 188" role="img" aria-label="Sebastian Vaskes Pimentel — building systems for messy data">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="188" viewBox="0 0 860 188" role="img" aria-label="Seb — building systems for messy data">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0d0b16"/>
@@ -16,9 +16,9 @@
   <rect x="28" y="28" width="4" height="132" rx="2" fill="#8b5cf6"/>
 
   <circle cx="52" cy="42" r="4" fill="#8b5cf6"/>
-  <text x="64" y="47" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" fill="#9a92b2" letter-spacing="2">~/sebastian</text>
+  <text x="64" y="47" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" fill="#9a92b2" letter-spacing="2">~/seb</text>
 
-  <text x="48" y="86" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="33" font-weight="700" fill="#f4f1ff" letter-spacing="0.5">Sebastian Vaskes Pimentel</text>
+  <text x="48" y="86" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="33" font-weight="700" fill="#f4f1ff" letter-spacing="0.5">Seb</text>
 
   <text x="48" y="116" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="600" fill="#a78bfa" letter-spacing="0.4">building systems for messy data</text>
 
@@ -27,7 +27,6 @@
 
   <!-- motif: scattered rows -> gate -> structured warehouse blocks -->
   <g transform="translate(628, 30)">
-    <!-- scattered raw rows -->
     <g stroke="#9a92b2" stroke-width="2" stroke-linecap="round" opacity="0.85">
       <line x1="0" y1="10" x2="26" y2="6"/>
       <line x1="2" y1="26" x2="30" y2="24"/>
@@ -38,12 +37,10 @@
       <line x1="0" y1="114" x2="20" y2="110"/>
     </g>
 
-    <!-- validation gate -->
     <line x1="52" y1="4" x2="52" y2="124" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="5 4"/>
     <circle cx="52" cy="64" r="7" fill="#0d0b16" stroke="#8b5cf6" stroke-width="2"/>
     <path d="M48.5 64 l2.5 2.5 l4.5 -5" stroke="#8b5cf6" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-    <!-- structured blocks -->
     <g fill="#8b5cf6" fill-opacity="0.14" stroke="#a78bfa" stroke-width="1.5">
       <rect x="72" y="6" width="58" height="14" rx="3"/>
       <rect x="72" y="26" width="58" height="14" rx="3"/>
