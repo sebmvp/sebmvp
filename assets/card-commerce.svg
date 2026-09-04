@@ -1,34 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="150" viewBox="0 0 420 150" role="img" aria-label="Commerce Data Platform — validated ingest, warehouse trust, business tools">
-  <rect width="420" height="150" rx="10" fill="#151126"/>
-  <rect width="420" height="150" rx="10" fill="none" stroke="#2e2650" stroke-width="1.5"/>
-  <rect x="0" y="0" width="420" height="3" rx="1.5" fill="#8b5cf6"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120" viewBox="0 0 420 120" role="img" aria-label="Commerce Data Platform — validated ingest, warehouse trust, business tools">
+  <rect width="420" height="120" rx="8" fill="#0c0b12"/>
+  <rect width="420" height="120" rx="8" fill="none" stroke="#2c2838" stroke-width="1"/>
 
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
-    <text x="22" y="34" font-size="10.5" fill="#9a92b2" letter-spacing="1.5">DATA PLATFORM</text>
-    <text x="22" y="58" font-size="16.5" font-weight="700" fill="#f4f1ff">Commerce Data Platform</text>
-    <text x="22" y="78" font-size="10.5" fill="#9a92b2">validated ingest · warehouse trust · business tools</text>
+  <text x="22" y="32" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#8a8498" letter-spacing="1.6">DATA PLATFORM</text>
+  <text x="22" y="58" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="600" fill="#f2f0f7">Commerce Data Platform</text>
+  <text x="22" y="80" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" fill="#8a8498">validated ingest · warehouse trust · business tools</text>
 
-    <!-- motif: rows -> gate -> warehouse -->
-    <g transform="translate(22, 96)">
-      <g stroke="#9a92b2" stroke-width="1.8" stroke-linecap="round" opacity="0.8">
-        <line x1="0" y1="4" x2="18" y2="2"/>
-        <line x1="1" y1="16" x2="20" y2="14"/>
-        <line x1="0" y1="28" x2="16" y2="26"/>
-        <line x1="2" y1="40" x2="19" y2="38"/>
-      </g>
-      <line x1="40" y1="0" x2="40" y2="44" stroke="#8b5cf6" stroke-width="1.8" stroke-dasharray="4 3"/>
-      <circle cx="40" cy="22" r="5.5" fill="#151126" stroke="#8b5cf6" stroke-width="1.8"/>
-      <path d="M37.5 22 l2 2 l3.5 -4" stroke="#8b5cf6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <g fill="#8b5cf6" fill-opacity="0.14" stroke="#a78bfa" stroke-width="1.2">
-        <rect x="56" y="2" width="42" height="10" rx="2"/>
-        <rect x="56" y="16" width="42" height="10" rx="2"/>
-        <rect x="56" y="30" width="42" height="10" rx="2"/>
-      </g>
-      <g fill="#67e8f9">
-        <circle cx="61" cy="7" r="1.8"/><circle cx="61" cy="21" r="1.8"/><circle cx="61" cy="35" r="1.8"/>
-      </g>
-    </g>
-
-    <text x="398" y="140" text-anchor="end" font-size="10" fill="#8b5cf6">duckdb · fastapi · docker</text>
+  <g fill="#8b5cf6" transform="translate(318, 36)">
+    <rect x="0" y="4" width="72" height="8" rx="1" opacity="0.35"/>
+    <rect x="0" y="18" width="72" height="8" rx="1" opacity="0.55"/>
+    <rect x="0" y="32" width="72" height="8" rx="1" opacity="0.75"/>
+    <rect x="0" y="46" width="72" height="8" rx="1"/>
   </g>
 </svg>

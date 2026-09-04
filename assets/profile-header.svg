@@ -1,62 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="188" viewBox="0 0 860 188" role="img" aria-label="Seb — building systems for messy data">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0d0b16"/>
-      <stop offset="1" stop-color="#151126"/>
-    </linearGradient>
-    <pattern id="grid" width="43" height="47" patternUnits="userSpaceOnUse">
-      <path d="M43 0H0V47" fill="none" stroke="#241d3d" stroke-width="1" stroke-opacity="0.55"/>
-    </pattern>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="152" viewBox="0 0 860 152" role="img" aria-label="Seb — building systems for messy data">
+  <rect width="860" height="152" rx="8" fill="#0c0b12"/>
+  <rect width="860" height="152" rx="8" fill="none" stroke="#2c2838" stroke-width="1"/>
 
-  <rect width="860" height="188" rx="10" fill="url(#bg)"/>
-  <rect width="860" height="188" rx="10" fill="url(#grid)"/>
-  <rect width="860" height="188" rx="10" fill="none" stroke="#2e2650" stroke-width="1.5"/>
+  <text x="36" y="58" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="36" font-weight="600" fill="#f2f0f7" letter-spacing="-0.8">Seb</text>
+  <text x="36" y="86" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="500" fill="#a78bfa">building systems for messy data</text>
+  <text x="36" y="114" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#8a8498">python / sql / pipelines / retrieval / automation</text>
+  <text x="36" y="134" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#8a8498"><tspan fill="#8b5cf6">›</tspan> currently: making data easier to trust</text>
 
-  <rect x="28" y="28" width="4" height="132" rx="2" fill="#8b5cf6"/>
-
-  <circle cx="52" cy="42" r="4" fill="#8b5cf6"/>
-  <text x="64" y="47" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" fill="#9a92b2" letter-spacing="2">~/seb</text>
-
-  <text x="48" y="86" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="33" font-weight="700" fill="#f4f1ff" letter-spacing="0.5">Seb</text>
-
-  <text x="48" y="116" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="600" fill="#a78bfa" letter-spacing="0.4">building systems for messy data</text>
-
-  <text x="48" y="144" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" fill="#9a92b2" letter-spacing="0.4">python / sql / pipelines / retrieval / automation</text>
-  <text x="48" y="166" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" fill="#9a92b2" letter-spacing="0.4"><tspan fill="#67e8f9">&gt;</tspan> currently: making data easier to trust</text>
-
-  <!-- motif: scattered rows -> gate -> structured warehouse blocks -->
-  <g transform="translate(628, 30)">
-    <g stroke="#9a92b2" stroke-width="2" stroke-linecap="round" opacity="0.85">
-      <line x1="0" y1="10" x2="26" y2="6"/>
-      <line x1="2" y1="26" x2="30" y2="24"/>
-      <line x1="0" y1="44" x2="22" y2="40"/>
-      <line x1="4" y1="60" x2="28" y2="58"/>
-      <line x1="0" y1="78" x2="24" y2="74"/>
-      <line x1="2" y1="96" x2="30" y2="92"/>
-      <line x1="0" y1="114" x2="20" y2="110"/>
-    </g>
-
-    <line x1="52" y1="4" x2="52" y2="124" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="5 4"/>
-    <circle cx="52" cy="64" r="7" fill="#0d0b16" stroke="#8b5cf6" stroke-width="2"/>
-    <path d="M48.5 64 l2.5 2.5 l4.5 -5" stroke="#8b5cf6" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <g fill="#8b5cf6" fill-opacity="0.14" stroke="#a78bfa" stroke-width="1.5">
-      <rect x="72" y="6" width="58" height="14" rx="3"/>
-      <rect x="72" y="26" width="58" height="14" rx="3"/>
-      <rect x="72" y="46" width="58" height="14" rx="3"/>
-      <rect x="72" y="66" width="58" height="14" rx="3"/>
-      <rect x="72" y="86" width="58" height="14" rx="3"/>
-      <rect x="72" y="106" width="58" height="14" rx="3"/>
-    </g>
-    <g fill="#67e8f9">
-      <circle cx="80" cy="13" r="2.2"/><circle cx="80" cy="33" r="2.2"/><circle cx="80" cy="53" r="2.2"/>
-      <circle cx="80" cy="73" r="2.2"/><circle cx="80" cy="93" r="2.2"/><circle cx="80" cy="113" r="2.2"/>
-    </g>
-    <g stroke="#a78bfa" stroke-width="1.3" opacity="0.8">
-      <line x1="88" y1="13" x2="122" y2="13"/><line x1="88" y1="33" x2="118" y2="33"/>
-      <line x1="88" y1="53" x2="124" y2="53"/><line x1="88" y1="73" x2="116" y2="73"/>
-      <line x1="88" y1="93" x2="122" y2="93"/><line x1="88" y1="113" x2="120" y2="113"/>
-    </g>
+  <g fill="#8b5cf6" transform="translate(724, 36)">
+    <rect x="0" y="8" width="10" height="10" rx="1" opacity="0.45"/>
+    <rect x="0" y="26" width="10" height="10" rx="1" opacity="0.45"/>
+    <rect x="0" y="44" width="10" height="10" rx="1" opacity="0.45"/>
+    <rect x="0" y="62" width="10" height="10" rx="1" opacity="0.45"/>
+    <rect x="0" y="80" width="10" height="10" rx="1" opacity="0.45"/>
+    <rect x="18" y="8" width="10" height="10" rx="1"/>
+    <rect x="18" y="26" width="10" height="10" rx="1"/>
+    <rect x="18" y="44" width="10" height="10" rx="1"/>
+    <rect x="18" y="62" width="10" height="10" rx="1"/>
+    <rect x="18" y="80" width="10" height="10" rx="1"/>
   </g>
 </svg>
