@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="152" viewBox="0 0 860 152" role="img" aria-label="Seb">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="152" viewBox="0 0 860 152" role="img" aria-label="Seb — python / sql / pipelines / retrieval / automation">
   <rect width="860" height="152" rx="8" fill="#0c0b12"/>
   <rect width="860" height="152" rx="8" fill="none" stroke="#2c2838" stroke-width="1"/>
 
@@ -6,16 +6,14 @@
   <text x="36" y="100" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#8a8498">python / sql / pipelines / retrieval / automation</text>
   <text x="36" y="124" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#8a8498"><tspan fill="#8b5cf6">›</tspan> currently: making data easier to trust</text>
 
-  <g fill="#8b5cf6" transform="translate(724, 36)">
-    <rect x="0" y="8" width="10" height="10" rx="1" opacity="0.45"/>
-    <rect x="0" y="26" width="10" height="10" rx="1" opacity="0.45"/>
-    <rect x="0" y="44" width="10" height="10" rx="1" opacity="0.45"/>
-    <rect x="0" y="62" width="10" height="10" rx="1" opacity="0.45"/>
-    <rect x="0" y="80" width="10" height="10" rx="1" opacity="0.45"/>
-    <rect x="18" y="8" width="10" height="10" rx="1"/>
-    <rect x="18" y="26" width="10" height="10" rx="1"/>
-    <rect x="18" y="44" width="10" height="10" rx="1"/>
-    <rect x="18" y="62" width="10" height="10" rx="1"/>
-    <rect x="18" y="80" width="10" height="10" rx="1"/>
+  <g transform="translate(694, 34)" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="0" width="120" height="80" rx="4" stroke="#2c2838" stroke-width="1"/>
+    <line x1="8" y1="12" x2="112" y2="12" opacity="0.35"/>
+    <line x1="8" y1="24" x2="112" y2="24" opacity="0.35"/>
+    <line x1="8" y1="36" x2="92" y2="36" opacity="0.35"/>
+    <circle cx="24" cy="60" r="8" stroke-dasharray="32 16">
+      <animateTransform attributeName="transform" type="rotate" from="0 24 60" to="360 24 60" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <polyline points="48,68 60,52 76,64 92,44 108,56" opacity="0.9"/>
   </g>
 </svg>

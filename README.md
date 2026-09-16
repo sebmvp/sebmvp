@@ -16,7 +16,7 @@ A pipeline you can't rerun safely is a liability with a scheduler.
   <img src="assets/card-macro.svg" alt="Macro Stress & Asset Behavior — gold vs. bitcoin as safe havens under market stress" width="420"/>
 </a>
 
-**[Commerce Data Platform](https://github.com/sebmvp/commerce-data-platform)** — resale operations data into a DuckDB warehouse you can rebuild. Replay-safe ingest, quarantine, reconciliation, typed business tools over explicit metrics.
+**[Commerce Data Platform](https://github.com/sebmvp/commerce-data-platform)** — resale operations data into a PostgreSQL warehouse you can replay. Replay-safe ingest, quarantine, reconciliation, context engine, and an operator workspace over explicit metrics.
 
 **[Enterprise RAG Data Pipeline](https://github.com/sebmvp/enterprise-rag-data-pipeline)** — Harpak-ULMA internship case study. I owned the offline side: inconsistent documents and equipment metadata into structured, validated records with provenance. Not the production retrieval app.
 
@@ -24,7 +24,7 @@ A pipeline you can't rerun safely is a liability with a scheduler.
 
 ## Currently
 
-Commerce Data Platform — warehouse, trust, business tools. Copilot later.
+Commerce Data Platform — warehouse, context engine, operator workspace.
 
 ## Off keyboard
 
