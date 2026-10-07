@@ -26,8 +26,9 @@ def build(preview=None, source="simulated", rng=None):
     letters = glyphs()
 
     css = [
-        "    :root { --ce: %s; --cb: %s; }" % (C.CUBE_LIGHT, C.CUBE_STROKE),
-        "    @media (prefers-color-scheme: dark) { :root { --ce: %s; } }" % C.CUBE,
+        "    :root { --ce: %s; --cb: %s; }" % (C.CUBE_LIGHT, C.CUBE_STROKE_LIGHT),
+        "    @media (prefers-color-scheme: dark) { :root { --ce: %s; --cb: %s; } }"
+        % (C.CUBE, C.CUBE_STROKE),
         "    text { font-family: Menlo, 'SF Mono', Monaco, ui-monospace, monospace; }",
         "    .s0, .s1, .s2, .s3 { transform-box: fill-box; transform-origin: 0 0; }",
     ]

@@ -17,13 +17,14 @@ GRID_H = ROWS * PITCH - GAP
 OX = (W - GRID_W) / 2
 OY = (H - GRID_H) / 2
 
-# Empty cells match GitHub contribution squares so the SVG sits on the page,
-# not on a card. Dark/light via --ce in the SVG CSS.
+# Empty cells use GitHub contribution colors. Fill stays see-through so
+# the type reads; the lattice comes from a quiet stroke, not a card.
 CUBE = "#161b22"
-CUBE_OPACITY = 0.62
-CUBE_STROKE = "#1b1f23"
-CUBE_STROKE_OPACITY = 0.06
+CUBE_OPACITY = 0.24
+CUBE_STROKE = "#30363d"
+CUBE_STROKE_OPACITY = 0.5
 CUBE_LIGHT = "#ebedf0"
+CUBE_STROKE_LIGHT = "#d0d7de"
 
 # L1 dim → L4 brightest. Letters use L4.
 LEVELS = ["#3a3152", "#5c4d86", "#7c6bb0", "#a78bfa"]
