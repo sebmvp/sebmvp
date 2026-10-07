@@ -1,8 +1,10 @@
 <p align="center">
-  <img src="assets/profile-header.svg" alt="Seb" width="100%"/>
+  <img src="assets/profile-header.svg" alt="Hi there. This is Seb's portfolio." width="100%"/>
 </p>
 
-A pipeline you can't rerun safely is a liability with a scheduler.
+`› currently:` reading · training · traveling · automating something that probably didn't need automating
+
+[sebavaspim@gmail.com](mailto:sebavaspim@gmail.com) · [linkedin.com/in/sebastianvaskes](https://www.linkedin.com/in/sebastianvaskes)
 
 ## Selected work
 
@@ -22,15 +24,4 @@ A pipeline you can't rerun safely is a liability with a scheduler.
 
 **[Macro Stress & Asset Behavior](https://github.com/sebmvp/macro-asset-stress-modeling)** — CompSci 390B research. Gold is a conditional safe haven; Bitcoin is not digital gold. I worked on model design, training, evaluation, and comparison.
 
-## Currently
-
-Commerce Data Platform — warehouse, context engine, operator workspace.
-
-## Off keyboard
-
-Usually reading, training, traveling, or automating something that probably didn't need automating.
-
-## Find me
-
-- [linkedin.com/in/sebastianvaskes](https://www.linkedin.com/in/sebastianvaskes)
-- [sebavaspim@gmail.com](mailto:sebavaspim@gmail.com)
+A pipeline you can't rerun safely is a liability with a scheduler.
