@@ -6,8 +6,8 @@ Grid geometry matches aouellets/Platane snk: 880x192, 53x7, 12px cells,
 
 Source of the animation is this file. It writes assets/profile-header.svg
 with indented CSS keyframes (same approach as the contribution snake, which
-Safari and GitHub actually play). Loop: type in, hold, letters snap into
-nearby contribution cubes, hold, reset.
+Safari and GitHub actually play). Loop: type in, fast delete, type in again,
+hold a few seconds, letters snap into nearby contribution cubes, reset.
 """
 
 import os
@@ -53,29 +53,58 @@ X2 = OX + GRID_W * 0.80
 Y2 = OY + GRID_H * 0.72
 
 CHAR_IN = 0.12
-CHAR_OUT = 0.04
+CHAR_DEL = 0.035  # nards-style backspace, much faster than type-in
+CHAR_OUT = 0.04  # dissolve into cubes
 LINE_PAUSE = 0.45
 START_S = 0.25
-HOLD_S = 2.8
+READ_1 = 0.75  # beat after the first full message, then delete
+GAP = 0.2
+HOLD_S = 3.2  # sit on the second display before cubes
 CUBE_HOLD = 2.4
 REST = 0.88
 SEED = 2026
 
 
-def type_end():
-    return START_S + len(LINE1) * CHAR_IN + LINE_PAUSE + len(LINE2) * CHAR_IN
+def n_letters():
+    return len(LINE1) + len(LINE2)
+
+
+def type_span():
+    return len(LINE1) * CHAR_IN + LINE_PAUSE + len(LINE2) * CHAR_IN
+
+
+def type1_end():
+    return START_S + type_span()
+
+
+def delete_start():
+    return type1_end() + READ_1
+
+
+def type2_start():
+    return delete_start() + n_letters() * CHAR_DEL + GAP
+
+
+def type2_end():
+    return type2_start() + type_span()
 
 
 def convert_start():
-    return type_end() + HOLD_S
+    return type2_end() + HOLD_S
 
 
 def convert_end():
-    return convert_start() + (len(LINE1) + len(LINE2)) * CHAR_OUT
+    return convert_start() + n_letters() * CHAR_OUT
 
 
 def total_s():
     return convert_end() + CUBE_HOLD + 0.5
+
+
+def letter_offset(index):
+    if index < len(LINE1):
+        return index * CHAR_IN
+    return len(LINE1) * CHAR_IN + LINE_PAUSE + (index - len(LINE1)) * CHAR_IN
 
 
 def pct(seconds, total):
@@ -152,23 +181,44 @@ def assign_cubes(rng):
     return assigned
 
 
+def bump(values):
+    """Keep keyframe percents strictly increasing and inside 0..99.9."""
+    out = []
+    last = -0.05
+    for x in values:
+        x = max(x, last + 0.05)
+        x = min(x, 99.9)
+        out.append(x)
+        last = x
+    return out
+
+
 def letter_css(g, total):
     i = g["index"]
-    appear = pct(g["appear"], total)
-    on = pct(g["appear"] + 0.02, total)
-    out = pct(convert_start() + i * CHAR_OUT, total)
-    off = pct(convert_start() + i * CHAR_OUT + 0.02, total)
-    if on <= appear:
-        on = min(100.0, appear + 0.05)
-    if out <= on:
-        out = min(100.0, on + 0.05)
-    if off <= out:
-        off = min(100.0, out + 0.05)
+    n = n_letters()
+    a1 = g["appear"]
+    dlt = delete_start() + (n - 1 - i) * CHAR_DEL
+    a2 = type2_start() + letter_offset(i)
+    conv = convert_start() + i * CHAR_OUT
+    a1p, a1on, dp, doff, a2p, a2on, cp, coff = bump(
+        [
+            pct(a1, total),
+            pct(a1 + 0.02, total),
+            pct(dlt, total),
+            pct(dlt + 0.02, total),
+            pct(a2, total),
+            pct(a2 + 0.02, total),
+            pct(conv, total),
+            pct(conv + 0.02, total),
+        ]
+    )
     return (
         f"    @keyframes L{i} {{\n"
-        f"      0%, {appear:.2f}% {{ opacity: 0; }}\n"
-        f"      {on:.2f}%, {out:.2f}% {{ opacity: {REST}; }}\n"
-        f"      {off:.2f}%, 100% {{ opacity: 0; }}\n"
+        f"      0%, {a1p:.2f}% {{ opacity: 0; }}\n"
+        f"      {a1on:.2f}%, {dp:.2f}% {{ opacity: {REST}; }}\n"
+        f"      {doff:.2f}%, {a2p:.2f}% {{ opacity: 0; }}\n"
+        f"      {a2on:.2f}%, {cp:.2f}% {{ opacity: {REST}; }}\n"
+        f"      {coff:.2f}%, 100% {{ opacity: 0; }}\n"
         f"    }}\n"
         f"    .L{i} {{ animation: L{i} {total:.2f}s linear infinite; }}\n"
     )
@@ -273,7 +323,7 @@ def main():
     OUT.write_text(build(preview=preview))
     print(
         f"wrote {OUT} ({OUT.stat().st_size} bytes) "
-        f"loop={total_s():.1f}s in={CHAR_IN}s out={CHAR_OUT}s css-loop"
+        f"loop={total_s():.1f}s in={CHAR_IN}s del={CHAR_DEL}s out={CHAR_OUT}s"
     )
 
 

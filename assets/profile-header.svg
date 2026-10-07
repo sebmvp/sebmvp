@@ -3,785 +3,855 @@
   <style>
     text { font-family: Menlo, 'SF Mono', Monaco, ui-monospace, monospace; }
     @keyframes L0 {
-      0%, 2.08% { opacity: 0; }
-      2.25%, 64.17% { opacity: 0.88; }
-      64.33%, 100% { opacity: 0; }
+      0%, 1.30% { opacity: 0; }
+      1.40%, 35.58% { opacity: 0.88; }
+      35.68%, 36.80% { opacity: 0; }
+      36.91%, 77.63% { opacity: 0.88; }
+      77.74%, 100% { opacity: 0; }
     }
-    .L0 { animation: L0 12.00s linear infinite; }
+    .L0 { animation: L0 19.22s linear infinite; }
     @keyframes L1 {
-      0%, 3.08% { opacity: 0; }
-      3.25%, 64.50% { opacity: 0.88; }
-      64.67%, 100% { opacity: 0; }
+      0%, 1.92% { opacity: 0; }
+      2.03%, 35.40% { opacity: 0.88; }
+      35.50%, 37.43% { opacity: 0; }
+      37.53%, 77.84% { opacity: 0.88; }
+      77.95%, 100% { opacity: 0; }
     }
-    .L1 { animation: L1 12.00s linear infinite; }
+    .L1 { animation: L1 19.22s linear infinite; }
     @keyframes L2 {
-      0%, 4.08% { opacity: 0; }
-      4.25%, 64.83% { opacity: 0.88; }
-      65.00%, 100% { opacity: 0; }
+      0%, 2.55% { opacity: 0; }
+      2.65%, 35.21% { opacity: 0.88; }
+      35.32%, 38.05% { opacity: 0; }
+      38.15%, 78.05% { opacity: 0.88; }
+      78.15%, 100% { opacity: 0; }
     }
-    .L2 { animation: L2 12.00s linear infinite; }
+    .L2 { animation: L2 19.22s linear infinite; }
     @keyframes L3 {
-      0%, 5.08% { opacity: 0; }
-      5.25%, 65.17% { opacity: 0.88; }
-      65.33%, 100% { opacity: 0; }
+      0%, 3.17% { opacity: 0; }
+      3.28%, 35.03% { opacity: 0.88; }
+      35.14%, 38.67% { opacity: 0; }
+      38.78%, 78.26% { opacity: 0.88; }
+      78.36%, 100% { opacity: 0; }
     }
-    .L3 { animation: L3 12.00s linear infinite; }
+    .L3 { animation: L3 19.22s linear infinite; }
     @keyframes L4 {
-      0%, 6.08% { opacity: 0; }
-      6.25%, 65.50% { opacity: 0.88; }
-      65.67%, 100% { opacity: 0; }
+      0%, 3.80% { opacity: 0; }
+      3.90%, 34.85% { opacity: 0.88; }
+      34.95%, 39.30% { opacity: 0; }
+      39.40%, 78.47% { opacity: 0.88; }
+      78.57%, 100% { opacity: 0; }
     }
-    .L4 { animation: L4 12.00s linear infinite; }
+    .L4 { animation: L4 19.22s linear infinite; }
     @keyframes L5 {
-      0%, 7.08% { opacity: 0; }
-      7.25%, 65.83% { opacity: 0.88; }
-      66.00%, 100% { opacity: 0; }
+      0%, 4.42% { opacity: 0; }
+      4.53%, 34.67% { opacity: 0.88; }
+      34.77%, 39.92% { opacity: 0; }
+      40.03%, 78.67% { opacity: 0.88; }
+      78.78%, 100% { opacity: 0; }
     }
-    .L5 { animation: L5 12.00s linear infinite; }
+    .L5 { animation: L5 19.22s linear infinite; }
     @keyframes L6 {
-      0%, 8.08% { opacity: 0; }
-      8.25%, 66.17% { opacity: 0.88; }
-      66.33%, 100% { opacity: 0; }
+      0%, 5.05% { opacity: 0; }
+      5.15%, 34.49% { opacity: 0.88; }
+      34.59%, 40.55% { opacity: 0; }
+      40.65%, 78.88% { opacity: 0.88; }
+      78.99%, 100% { opacity: 0; }
     }
-    .L6 { animation: L6 12.00s linear infinite; }
+    .L6 { animation: L6 19.22s linear infinite; }
     @keyframes L7 {
-      0%, 9.08% { opacity: 0; }
-      9.25%, 66.50% { opacity: 0.88; }
-      66.67%, 100% { opacity: 0; }
+      0%, 5.67% { opacity: 0; }
+      5.77%, 34.30% { opacity: 0.88; }
+      34.41%, 41.17% { opacity: 0; }
+      41.27%, 79.09% { opacity: 0.88; }
+      79.19%, 100% { opacity: 0; }
     }
-    .L7 { animation: L7 12.00s linear infinite; }
+    .L7 { animation: L7 19.22s linear infinite; }
     @keyframes L8 {
-      0%, 10.08% { opacity: 0; }
-      10.25%, 66.83% { opacity: 0.88; }
-      67.00%, 100% { opacity: 0; }
+      0%, 6.29% { opacity: 0; }
+      6.40%, 34.12% { opacity: 0.88; }
+      34.23%, 41.79% { opacity: 0; }
+      41.90%, 79.30% { opacity: 0.88; }
+      79.40%, 100% { opacity: 0; }
     }
-    .L8 { animation: L8 12.00s linear infinite; }
+    .L8 { animation: L8 19.22s linear infinite; }
     @keyframes L9 {
-      0%, 14.83% { opacity: 0; }
-      15.00%, 67.17% { opacity: 0.88; }
-      67.33%, 100% { opacity: 0; }
+      0%, 9.26% { opacity: 0; }
+      9.36%, 33.94% { opacity: 0.88; }
+      34.04%, 44.76% { opacity: 0; }
+      44.86%, 79.51% { opacity: 0.88; }
+      79.61%, 100% { opacity: 0; }
     }
-    .L9 { animation: L9 12.00s linear infinite; }
+    .L9 { animation: L9 19.22s linear infinite; }
     @keyframes L10 {
-      0%, 15.83% { opacity: 0; }
-      16.00%, 67.50% { opacity: 0.88; }
-      67.67%, 100% { opacity: 0; }
+      0%, 9.88% { opacity: 0; }
+      9.99%, 33.76% { opacity: 0.88; }
+      33.86%, 45.38% { opacity: 0; }
+      45.49%, 79.71% { opacity: 0.88; }
+      79.82%, 100% { opacity: 0; }
     }
-    .L10 { animation: L10 12.00s linear infinite; }
+    .L10 { animation: L10 19.22s linear infinite; }
     @keyframes L11 {
-      0%, 16.83% { opacity: 0; }
-      17.00%, 67.83% { opacity: 0.88; }
-      68.00%, 100% { opacity: 0; }
+      0%, 10.51% { opacity: 0; }
+      10.61%, 33.58% { opacity: 0.88; }
+      33.68%, 46.01% { opacity: 0; }
+      46.11%, 79.92% { opacity: 0.88; }
+      80.03%, 100% { opacity: 0; }
     }
-    .L11 { animation: L11 12.00s linear infinite; }
+    .L11 { animation: L11 19.22s linear infinite; }
     @keyframes L12 {
-      0%, 17.83% { opacity: 0; }
-      18.00%, 68.17% { opacity: 0.88; }
-      68.33%, 100% { opacity: 0; }
+      0%, 11.13% { opacity: 0; }
+      11.24%, 33.39% { opacity: 0.88; }
+      33.50%, 46.63% { opacity: 0; }
+      46.74%, 80.13% { opacity: 0.88; }
+      80.23%, 100% { opacity: 0; }
     }
-    .L12 { animation: L12 12.00s linear infinite; }
+    .L12 { animation: L12 19.22s linear infinite; }
     @keyframes L13 {
-      0%, 18.83% { opacity: 0; }
-      19.00%, 68.50% { opacity: 0.88; }
-      68.67%, 100% { opacity: 0; }
+      0%, 11.76% { opacity: 0; }
+      11.86%, 33.21% { opacity: 0.88; }
+      33.32%, 47.26% { opacity: 0; }
+      47.36%, 80.34% { opacity: 0.88; }
+      80.44%, 100% { opacity: 0; }
     }
-    .L13 { animation: L13 12.00s linear infinite; }
+    .L13 { animation: L13 19.22s linear infinite; }
     @keyframes L14 {
-      0%, 19.83% { opacity: 0; }
-      20.00%, 68.83% { opacity: 0.88; }
-      69.00%, 100% { opacity: 0; }
+      0%, 12.38% { opacity: 0; }
+      12.48%, 33.03% { opacity: 0.88; }
+      33.13%, 47.88% { opacity: 0; }
+      47.98%, 80.55% { opacity: 0.88; }
+      80.65%, 100% { opacity: 0; }
     }
-    .L14 { animation: L14 12.00s linear infinite; }
+    .L14 { animation: L14 19.22s linear infinite; }
     @keyframes L15 {
-      0%, 20.83% { opacity: 0; }
-      21.00%, 69.17% { opacity: 0.88; }
-      69.33%, 100% { opacity: 0; }
+      0%, 13.00% { opacity: 0; }
+      13.11%, 32.85% { opacity: 0.88; }
+      32.95%, 48.50% { opacity: 0; }
+      48.61%, 80.75% { opacity: 0.88; }
+      80.86%, 100% { opacity: 0; }
     }
-    .L15 { animation: L15 12.00s linear infinite; }
+    .L15 { animation: L15 19.22s linear infinite; }
     @keyframes L16 {
-      0%, 21.83% { opacity: 0; }
-      22.00%, 69.50% { opacity: 0.88; }
-      69.67%, 100% { opacity: 0; }
+      0%, 13.63% { opacity: 0; }
+      13.73%, 32.67% { opacity: 0.88; }
+      32.77%, 49.13% { opacity: 0; }
+      49.23%, 80.96% { opacity: 0.88; }
+      81.07%, 100% { opacity: 0; }
     }
-    .L16 { animation: L16 12.00s linear infinite; }
+    .L16 { animation: L16 19.22s linear infinite; }
     @keyframes L17 {
-      0%, 22.83% { opacity: 0; }
-      23.00%, 69.83% { opacity: 0.88; }
-      70.00%, 100% { opacity: 0; }
+      0%, 14.25% { opacity: 0; }
+      14.36%, 32.48% { opacity: 0.88; }
+      32.59%, 49.75% { opacity: 0; }
+      49.86%, 81.17% { opacity: 0.88; }
+      81.27%, 100% { opacity: 0; }
     }
-    .L17 { animation: L17 12.00s linear infinite; }
+    .L17 { animation: L17 19.22s linear infinite; }
     @keyframes L18 {
-      0%, 23.83% { opacity: 0; }
-      24.00%, 70.17% { opacity: 0.88; }
-      70.33%, 100% { opacity: 0; }
+      0%, 14.88% { opacity: 0; }
+      14.98%, 32.30% { opacity: 0.88; }
+      32.41%, 50.38% { opacity: 0; }
+      50.48%, 81.38% { opacity: 0.88; }
+      81.48%, 100% { opacity: 0; }
     }
-    .L18 { animation: L18 12.00s linear infinite; }
+    .L18 { animation: L18 19.22s linear infinite; }
     @keyframes L19 {
-      0%, 24.83% { opacity: 0; }
-      25.00%, 70.50% { opacity: 0.88; }
-      70.67%, 100% { opacity: 0; }
+      0%, 15.50% { opacity: 0; }
+      15.60%, 32.12% { opacity: 0.88; }
+      32.22%, 51.00% { opacity: 0; }
+      51.11%, 81.59% { opacity: 0.88; }
+      81.69%, 100% { opacity: 0; }
     }
-    .L19 { animation: L19 12.00s linear infinite; }
+    .L19 { animation: L19 19.22s linear infinite; }
     @keyframes L20 {
-      0%, 25.83% { opacity: 0; }
-      26.00%, 70.83% { opacity: 0.88; }
-      71.00%, 100% { opacity: 0; }
+      0%, 16.12% { opacity: 0; }
+      16.23%, 31.94% { opacity: 0.88; }
+      32.04%, 51.63% { opacity: 0; }
+      51.73%, 81.79% { opacity: 0.88; }
+      81.90%, 100% { opacity: 0; }
     }
-    .L20 { animation: L20 12.00s linear infinite; }
+    .L20 { animation: L20 19.22s linear infinite; }
     @keyframes L21 {
-      0%, 26.83% { opacity: 0; }
-      27.00%, 71.17% { opacity: 0.88; }
-      71.33%, 100% { opacity: 0; }
+      0%, 16.75% { opacity: 0; }
+      16.85%, 31.76% { opacity: 0.88; }
+      31.86%, 52.25% { opacity: 0; }
+      52.35%, 82.00% { opacity: 0.88; }
+      82.11%, 100% { opacity: 0; }
     }
-    .L21 { animation: L21 12.00s linear infinite; }
+    .L21 { animation: L21 19.22s linear infinite; }
     @keyframes L22 {
-      0%, 27.83% { opacity: 0; }
-      28.00%, 71.50% { opacity: 0.88; }
-      71.67%, 100% { opacity: 0; }
+      0%, 17.37% { opacity: 0; }
+      17.48%, 31.57% { opacity: 0.88; }
+      31.68%, 52.87% { opacity: 0; }
+      52.98%, 82.21% { opacity: 0.88; }
+      82.31%, 100% { opacity: 0; }
     }
-    .L22 { animation: L22 12.00s linear infinite; }
+    .L22 { animation: L22 19.22s linear infinite; }
     @keyframes L23 {
-      0%, 28.83% { opacity: 0; }
-      29.00%, 71.83% { opacity: 0.88; }
-      72.00%, 100% { opacity: 0; }
+      0%, 18.00% { opacity: 0; }
+      18.10%, 31.39% { opacity: 0.88; }
+      31.50%, 53.50% { opacity: 0; }
+      53.60%, 82.42% { opacity: 0.88; }
+      82.52%, 100% { opacity: 0; }
     }
-    .L23 { animation: L23 12.00s linear infinite; }
+    .L23 { animation: L23 19.22s linear infinite; }
     @keyframes L24 {
-      0%, 29.83% { opacity: 0; }
-      30.00%, 72.17% { opacity: 0.88; }
-      72.33%, 100% { opacity: 0; }
+      0%, 18.62% { opacity: 0; }
+      18.73%, 31.21% { opacity: 0.88; }
+      31.31%, 54.12% { opacity: 0; }
+      54.23%, 82.63% { opacity: 0.88; }
+      82.73%, 100% { opacity: 0; }
     }
-    .L24 { animation: L24 12.00s linear infinite; }
+    .L24 { animation: L24 19.22s linear infinite; }
     @keyframes L25 {
-      0%, 30.83% { opacity: 0; }
-      31.00%, 72.50% { opacity: 0.88; }
-      72.67%, 100% { opacity: 0; }
+      0%, 19.25% { opacity: 0; }
+      19.35%, 31.03% { opacity: 0.88; }
+      31.13%, 54.75% { opacity: 0; }
+      54.85%, 82.83% { opacity: 0.88; }
+      82.94%, 100% { opacity: 0; }
     }
-    .L25 { animation: L25 12.00s linear infinite; }
+    .L25 { animation: L25 19.22s linear infinite; }
     @keyframes L26 {
-      0%, 31.83% { opacity: 0; }
-      32.00%, 72.83% { opacity: 0.88; }
-      73.00%, 100% { opacity: 0; }
+      0%, 19.87% { opacity: 0; }
+      19.97%, 30.85% { opacity: 0.88; }
+      30.95%, 55.37% { opacity: 0; }
+      55.47%, 83.04% { opacity: 0.88; }
+      83.15%, 100% { opacity: 0; }
     }
-    .L26 { animation: L26 12.00s linear infinite; }
+    .L26 { animation: L26 19.22s linear infinite; }
     @keyframes L27 {
-      0%, 32.83% { opacity: 0; }
-      33.00%, 73.17% { opacity: 0.88; }
-      73.33%, 100% { opacity: 0; }
+      0%, 20.49% { opacity: 0; }
+      20.60%, 30.66% { opacity: 0.88; }
+      30.77%, 55.99% { opacity: 0; }
+      56.10%, 83.25% { opacity: 0.88; }
+      83.36%, 100% { opacity: 0; }
     }
-    .L27 { animation: L27 12.00s linear infinite; }
+    .L27 { animation: L27 19.22s linear infinite; }
     @keyframes L28 {
-      0%, 33.83% { opacity: 0; }
-      34.00%, 73.50% { opacity: 0.88; }
-      73.67%, 100% { opacity: 0; }
+      0%, 21.12% { opacity: 0; }
+      21.22%, 30.48% { opacity: 0.88; }
+      30.59%, 56.62% { opacity: 0; }
+      56.72%, 83.46% { opacity: 0.88; }
+      83.56%, 100% { opacity: 0; }
     }
-    .L28 { animation: L28 12.00s linear infinite; }
+    .L28 { animation: L28 19.22s linear infinite; }
     @keyframes L29 {
-      0%, 34.83% { opacity: 0; }
-      35.00%, 73.83% { opacity: 0.88; }
-      74.00%, 100% { opacity: 0; }
+      0%, 21.74% { opacity: 0; }
+      21.85%, 30.30% { opacity: 0.88; }
+      30.40%, 57.24% { opacity: 0; }
+      57.35%, 83.67% { opacity: 0.88; }
+      83.77%, 100% { opacity: 0; }
     }
-    .L29 { animation: L29 12.00s linear infinite; }
+    .L29 { animation: L29 19.22s linear infinite; }
     @keyframes L30 {
-      0%, 35.83% { opacity: 0; }
-      36.00%, 74.17% { opacity: 0.88; }
-      74.33%, 100% { opacity: 0; }
+      0%, 22.37% { opacity: 0; }
+      22.47%, 30.12% { opacity: 0.88; }
+      30.22%, 57.87% { opacity: 0; }
+      57.97%, 83.88% { opacity: 0.88; }
+      83.98%, 100% { opacity: 0; }
     }
-    .L30 { animation: L30 12.00s linear infinite; }
+    .L30 { animation: L30 19.22s linear infinite; }
     @keyframes L31 {
-      0%, 36.83% { opacity: 0; }
-      37.00%, 74.50% { opacity: 0.88; }
-      74.67%, 100% { opacity: 0; }
+      0%, 22.99% { opacity: 0; }
+      23.09%, 29.93% { opacity: 0.88; }
+      30.04%, 58.49% { opacity: 0; }
+      58.60%, 84.08% { opacity: 0.88; }
+      84.19%, 100% { opacity: 0; }
     }
-    .L31 { animation: L31 12.00s linear infinite; }
+    .L31 { animation: L31 19.22s linear infinite; }
     @keyframes L32 {
-      0%, 37.83% { opacity: 0; }
-      38.00%, 74.83% { opacity: 0.88; }
-      75.00%, 100% { opacity: 0; }
+      0%, 23.62% { opacity: 0; }
+      23.72%, 29.75% { opacity: 0.88; }
+      29.86%, 59.12% { opacity: 0; }
+      59.22%, 84.29% { opacity: 0.88; }
+      84.40%, 100% { opacity: 0; }
     }
-    .L32 { animation: L32 12.00s linear infinite; }
+    .L32 { animation: L32 19.22s linear infinite; }
     @keyframes L33 {
-      0%, 38.83% { opacity: 0; }
-      39.00%, 75.17% { opacity: 0.88; }
-      75.33%, 100% { opacity: 0; }
+      0%, 24.24% { opacity: 0; }
+      24.34%, 29.57% { opacity: 0.88; }
+      29.67%, 59.74% { opacity: 0; }
+      59.84%, 84.50% { opacity: 0.88; }
+      84.60%, 100% { opacity: 0; }
     }
-    .L33 { animation: L33 12.00s linear infinite; }
+    .L33 { animation: L33 19.22s linear infinite; }
     @keyframes L34 {
-      0%, 39.83% { opacity: 0; }
-      40.00%, 75.50% { opacity: 0.88; }
-      75.67%, 100% { opacity: 0; }
+      0%, 24.86% { opacity: 0; }
+      24.97%, 29.39% { opacity: 0.88; }
+      29.49%, 60.36% { opacity: 0; }
+      60.47%, 84.71% { opacity: 0.88; }
+      84.81%, 100% { opacity: 0; }
     }
-    .L34 { animation: L34 12.00s linear infinite; }
+    .L34 { animation: L34 19.22s linear infinite; }
     @keyframes C0 {
-      0%, 64.50% { fill: #262430; fill-opacity: 0.48; }
-      65.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 77.84% { fill: #262430; fill-opacity: 0.48; }
+      78.26%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C0 { animation: C0 12.00s linear infinite; }
+    .C0 { animation: C0 19.22s linear infinite; }
     @keyframes C1 {
-      0%, 64.50% { fill: #262430; fill-opacity: 0.48; }
-      65.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 77.84% { fill: #262430; fill-opacity: 0.48; }
+      78.26%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C1 { animation: C1 12.00s linear infinite; }
+    .C1 { animation: C1 19.22s linear infinite; }
     @keyframes C2 {
-      0%, 64.17% { fill: #262430; fill-opacity: 0.48; }
-      64.83%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 77.63% { fill: #262430; fill-opacity: 0.48; }
+      78.05%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C2 { animation: C2 12.00s linear infinite; }
+    .C2 { animation: C2 19.22s linear infinite; }
     @keyframes C3 {
-      0%, 64.83% { fill: #262430; fill-opacity: 0.48; }
-      65.50%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.05% { fill: #262430; fill-opacity: 0.48; }
+      78.47%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C3 { animation: C3 12.00s linear infinite; }
+    .C3 { animation: C3 19.22s linear infinite; }
     @keyframes C4 {
-      0%, 64.17% { fill: #262430; fill-opacity: 0.48; }
-      64.83%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 77.63% { fill: #262430; fill-opacity: 0.48; }
+      78.05%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C4 { animation: C4 12.00s linear infinite; }
+    .C4 { animation: C4 19.22s linear infinite; }
     @keyframes C5 {
-      0%, 64.83% { fill: #262430; fill-opacity: 0.48; }
-      65.50%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.05% { fill: #262430; fill-opacity: 0.48; }
+      78.47%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C5 { animation: C5 12.00s linear infinite; }
+    .C5 { animation: C5 19.22s linear infinite; }
     @keyframes C6 {
-      0%, 65.17% { fill: #262430; fill-opacity: 0.48; }
-      65.83%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.26% { fill: #262430; fill-opacity: 0.48; }
+      78.67%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C6 { animation: C6 12.00s linear infinite; }
+    .C6 { animation: C6 19.22s linear infinite; }
     @keyframes C7 {
-      0%, 65.17% { fill: #262430; fill-opacity: 0.48; }
-      65.83%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.26% { fill: #262430; fill-opacity: 0.48; }
+      78.67%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C7 { animation: C7 12.00s linear infinite; }
+    .C7 { animation: C7 19.22s linear infinite; }
     @keyframes C8 {
-      0%, 65.50% { fill: #262430; fill-opacity: 0.48; }
-      66.17%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.47% { fill: #262430; fill-opacity: 0.48; }
+      78.88%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C8 { animation: C8 12.00s linear infinite; }
+    .C8 { animation: C8 19.22s linear infinite; }
     @keyframes C9 {
-      0%, 64.50% { fill: #262430; fill-opacity: 0.48; }
-      65.17%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 77.84% { fill: #262430; fill-opacity: 0.48; }
+      78.26%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C9 { animation: C9 12.00s linear infinite; }
+    .C9 { animation: C9 19.22s linear infinite; }
     @keyframes C10 {
-      0%, 66.17% { fill: #262430; fill-opacity: 0.48; }
-      66.83%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.88% { fill: #262430; fill-opacity: 0.48; }
+      79.30%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C10 { animation: C10 12.00s linear infinite; }
+    .C10 { animation: C10 19.22s linear infinite; }
     @keyframes C11 {
-      0%, 65.50% { fill: #262430; fill-opacity: 0.48; }
-      66.17%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.47% { fill: #262430; fill-opacity: 0.48; }
+      78.88%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C11 { animation: C11 12.00s linear infinite; }
+    .C11 { animation: C11 19.22s linear infinite; }
     @keyframes C12 {
-      0%, 64.83% { fill: #262430; fill-opacity: 0.48; }
-      65.50%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.05% { fill: #262430; fill-opacity: 0.48; }
+      78.47%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C12 { animation: C12 12.00s linear infinite; }
+    .C12 { animation: C12 19.22s linear infinite; }
     @keyframes C13 {
-      0%, 66.50% { fill: #262430; fill-opacity: 0.48; }
-      67.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.09% { fill: #262430; fill-opacity: 0.48; }
+      79.51%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C13 { animation: C13 12.00s linear infinite; }
+    .C13 { animation: C13 19.22s linear infinite; }
     @keyframes C14 {
-      0%, 65.17% { fill: #262430; fill-opacity: 0.48; }
-      65.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.26% { fill: #262430; fill-opacity: 0.48; }
+      78.67%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C14 { animation: C14 12.00s linear infinite; }
+    .C14 { animation: C14 19.22s linear infinite; }
     @keyframes C15 {
-      0%, 65.50% { fill: #262430; fill-opacity: 0.48; }
-      66.17%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.47% { fill: #262430; fill-opacity: 0.48; }
+      78.88%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C15 { animation: C15 12.00s linear infinite; }
+    .C15 { animation: C15 19.22s linear infinite; }
     @keyframes C16 {
-      0%, 65.83% { fill: #262430; fill-opacity: 0.48; }
-      66.50%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.67% { fill: #262430; fill-opacity: 0.48; }
+      79.09%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C16 { animation: C16 12.00s linear infinite; }
+    .C16 { animation: C16 19.22s linear infinite; }
     @keyframes C17 {
-      0%, 66.17% { fill: #262430; fill-opacity: 0.48; }
-      66.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.88% { fill: #262430; fill-opacity: 0.48; }
+      79.30%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C17 { animation: C17 12.00s linear infinite; }
+    .C17 { animation: C17 19.22s linear infinite; }
     @keyframes C18 {
-      0%, 65.83% { fill: #262430; fill-opacity: 0.48; }
-      66.50%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.67% { fill: #262430; fill-opacity: 0.48; }
+      79.09%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C18 { animation: C18 12.00s linear infinite; }
+    .C18 { animation: C18 19.22s linear infinite; }
     @keyframes C19 {
-      0%, 65.83% { fill: #262430; fill-opacity: 0.48; }
-      66.50%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.67% { fill: #262430; fill-opacity: 0.48; }
+      79.09%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C19 { animation: C19 12.00s linear infinite; }
+    .C19 { animation: C19 19.22s linear infinite; }
     @keyframes C20 {
-      0%, 66.17% { fill: #262430; fill-opacity: 0.48; }
-      66.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 78.88% { fill: #262430; fill-opacity: 0.48; }
+      79.30%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C20 { animation: C20 12.00s linear infinite; }
+    .C20 { animation: C20 19.22s linear infinite; }
     @keyframes C21 {
-      0%, 66.50% { fill: #262430; fill-opacity: 0.48; }
-      67.17%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.09% { fill: #262430; fill-opacity: 0.48; }
+      79.51%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C21 { animation: C21 12.00s linear infinite; }
+    .C21 { animation: C21 19.22s linear infinite; }
     @keyframes C22 {
-      0%, 66.83% { fill: #262430; fill-opacity: 0.48; }
-      67.50%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.30% { fill: #262430; fill-opacity: 0.48; }
+      79.71%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C22 { animation: C22 12.00s linear infinite; }
+    .C22 { animation: C22 19.22s linear infinite; }
     @keyframes C23 {
-      0%, 66.83% { fill: #262430; fill-opacity: 0.48; }
-      67.50%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.30% { fill: #262430; fill-opacity: 0.48; }
+      79.71%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C23 { animation: C23 12.00s linear infinite; }
+    .C23 { animation: C23 19.22s linear infinite; }
     @keyframes C24 {
-      0%, 66.83% { fill: #262430; fill-opacity: 0.48; }
-      67.50%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.30% { fill: #262430; fill-opacity: 0.48; }
+      79.71%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C24 { animation: C24 12.00s linear infinite; }
+    .C24 { animation: C24 19.22s linear infinite; }
     @keyframes C25 {
-      0%, 67.17% { fill: #262430; fill-opacity: 0.48; }
-      67.83%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.51% { fill: #262430; fill-opacity: 0.48; }
+      79.92%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C25 { animation: C25 12.00s linear infinite; }
+    .C25 { animation: C25 19.22s linear infinite; }
     @keyframes C26 {
-      0%, 67.17% { fill: #262430; fill-opacity: 0.48; }
-      67.83%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.51% { fill: #262430; fill-opacity: 0.48; }
+      79.92%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C26 { animation: C26 12.00s linear infinite; }
+    .C26 { animation: C26 19.22s linear infinite; }
     @keyframes C27 {
-      0%, 67.83% { fill: #262430; fill-opacity: 0.48; }
-      68.50%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.92% { fill: #262430; fill-opacity: 0.48; }
+      80.34%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C27 { animation: C27 12.00s linear infinite; }
+    .C27 { animation: C27 19.22s linear infinite; }
     @keyframes C28 {
-      0%, 67.50% { fill: #262430; fill-opacity: 0.48; }
-      68.17%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.71% { fill: #262430; fill-opacity: 0.48; }
+      80.13%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C28 { animation: C28 12.00s linear infinite; }
+    .C28 { animation: C28 19.22s linear infinite; }
     @keyframes C29 {
-      0%, 67.50% { fill: #262430; fill-opacity: 0.48; }
-      68.17%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.71% { fill: #262430; fill-opacity: 0.48; }
+      80.13%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C29 { animation: C29 12.00s linear infinite; }
+    .C29 { animation: C29 19.22s linear infinite; }
     @keyframes C30 {
-      0%, 67.50% { fill: #262430; fill-opacity: 0.48; }
-      68.17%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.71% { fill: #262430; fill-opacity: 0.48; }
+      80.13%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C30 { animation: C30 12.00s linear infinite; }
+    .C30 { animation: C30 19.22s linear infinite; }
     @keyframes C31 {
-      0%, 68.17% { fill: #262430; fill-opacity: 0.48; }
-      68.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.13% { fill: #262430; fill-opacity: 0.48; }
+      80.55%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C31 { animation: C31 12.00s linear infinite; }
+    .C31 { animation: C31 19.22s linear infinite; }
     @keyframes C32 {
-      0%, 67.83% { fill: #262430; fill-opacity: 0.48; }
-      68.50%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.92% { fill: #262430; fill-opacity: 0.48; }
+      80.34%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C32 { animation: C32 12.00s linear infinite; }
+    .C32 { animation: C32 19.22s linear infinite; }
     @keyframes C33 {
-      0%, 68.83% { fill: #262430; fill-opacity: 0.48; }
-      69.50%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.55% { fill: #262430; fill-opacity: 0.48; }
+      80.96%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C33 { animation: C33 12.00s linear infinite; }
+    .C33 { animation: C33 19.22s linear infinite; }
     @keyframes C34 {
-      0%, 68.83% { fill: #262430; fill-opacity: 0.48; }
-      69.50%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.55% { fill: #262430; fill-opacity: 0.48; }
+      80.96%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C34 { animation: C34 12.00s linear infinite; }
+    .C34 { animation: C34 19.22s linear infinite; }
     @keyframes C35 {
-      0%, 68.50% { fill: #262430; fill-opacity: 0.48; }
-      69.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.34% { fill: #262430; fill-opacity: 0.48; }
+      80.75%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C35 { animation: C35 12.00s linear infinite; }
+    .C35 { animation: C35 19.22s linear infinite; }
     @keyframes C36 {
-      0%, 69.17% { fill: #262430; fill-opacity: 0.48; }
-      69.83%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.75% { fill: #262430; fill-opacity: 0.48; }
+      81.17%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C36 { animation: C36 12.00s linear infinite; }
+    .C36 { animation: C36 19.22s linear infinite; }
     @keyframes C37 {
-      0%, 67.83% { fill: #262430; fill-opacity: 0.48; }
-      68.50%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 79.92% { fill: #262430; fill-opacity: 0.48; }
+      80.34%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C37 { animation: C37 12.00s linear infinite; }
+    .C37 { animation: C37 19.22s linear infinite; }
     @keyframes C38 {
-      0%, 68.50% { fill: #262430; fill-opacity: 0.48; }
-      69.17%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.34% { fill: #262430; fill-opacity: 0.48; }
+      80.75%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C38 { animation: C38 12.00s linear infinite; }
+    .C38 { animation: C38 19.22s linear infinite; }
     @keyframes C39 {
-      0%, 69.83% { fill: #262430; fill-opacity: 0.48; }
-      70.50%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 81.17% { fill: #262430; fill-opacity: 0.48; }
+      81.59%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C39 { animation: C39 12.00s linear infinite; }
+    .C39 { animation: C39 19.22s linear infinite; }
     @keyframes C40 {
-      0%, 68.17% { fill: #262430; fill-opacity: 0.48; }
-      68.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.13% { fill: #262430; fill-opacity: 0.48; }
+      80.55%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C40 { animation: C40 12.00s linear infinite; }
+    .C40 { animation: C40 19.22s linear infinite; }
     @keyframes C41 {
-      0%, 69.83% { fill: #262430; fill-opacity: 0.48; }
-      70.50%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 81.17% { fill: #262430; fill-opacity: 0.48; }
+      81.59%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C41 { animation: C41 12.00s linear infinite; }
+    .C41 { animation: C41 19.22s linear infinite; }
     @keyframes C42 {
-      0%, 69.50% { fill: #262430; fill-opacity: 0.48; }
-      70.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.96% { fill: #262430; fill-opacity: 0.48; }
+      81.38%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C42 { animation: C42 12.00s linear infinite; }
+    .C42 { animation: C42 19.22s linear infinite; }
     @keyframes C43 {
-      0%, 68.83% { fill: #262430; fill-opacity: 0.48; }
-      69.50%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.55% { fill: #262430; fill-opacity: 0.48; }
+      80.96%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C43 { animation: C43 12.00s linear infinite; }
+    .C43 { animation: C43 19.22s linear infinite; }
     @keyframes C44 {
-      0%, 69.17% { fill: #262430; fill-opacity: 0.48; }
-      69.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.75% { fill: #262430; fill-opacity: 0.48; }
+      81.17%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C44 { animation: C44 12.00s linear infinite; }
+    .C44 { animation: C44 19.22s linear infinite; }
     @keyframes C45 {
-      0%, 69.50% { fill: #262430; fill-opacity: 0.48; }
-      70.17%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.96% { fill: #262430; fill-opacity: 0.48; }
+      81.38%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C45 { animation: C45 12.00s linear infinite; }
+    .C45 { animation: C45 19.22s linear infinite; }
     @keyframes C46 {
-      0%, 69.17% { fill: #262430; fill-opacity: 0.48; }
-      69.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.75% { fill: #262430; fill-opacity: 0.48; }
+      81.17%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C46 { animation: C46 12.00s linear infinite; }
+    .C46 { animation: C46 19.22s linear infinite; }
     @keyframes C47 {
-      0%, 70.83% { fill: #262430; fill-opacity: 0.48; }
-      71.50%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 81.79% { fill: #262430; fill-opacity: 0.48; }
+      82.21%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C47 { animation: C47 12.00s linear infinite; }
+    .C47 { animation: C47 19.22s linear infinite; }
     @keyframes C48 {
-      0%, 69.50% { fill: #262430; fill-opacity: 0.48; }
-      70.17%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 80.96% { fill: #262430; fill-opacity: 0.48; }
+      81.38%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C48 { animation: C48 12.00s linear infinite; }
+    .C48 { animation: C48 19.22s linear infinite; }
     @keyframes C49 {
-      0%, 70.83% { fill: #262430; fill-opacity: 0.48; }
-      71.50%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 81.79% { fill: #262430; fill-opacity: 0.48; }
+      82.21%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C49 { animation: C49 12.00s linear infinite; }
+    .C49 { animation: C49 19.22s linear infinite; }
     @keyframes C50 {
-      0%, 71.17% { fill: #262430; fill-opacity: 0.48; }
-      71.83%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.00% { fill: #262430; fill-opacity: 0.48; }
+      82.42%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C50 { animation: C50 12.00s linear infinite; }
+    .C50 { animation: C50 19.22s linear infinite; }
     @keyframes C51 {
-      0%, 70.50% { fill: #262430; fill-opacity: 0.48; }
-      71.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 81.59% { fill: #262430; fill-opacity: 0.48; }
+      82.00%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C51 { animation: C51 12.00s linear infinite; }
+    .C51 { animation: C51 19.22s linear infinite; }
     @keyframes C52 {
-      0%, 70.17% { fill: #262430; fill-opacity: 0.48; }
-      70.83%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 81.38% { fill: #262430; fill-opacity: 0.48; }
+      81.79%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C52 { animation: C52 12.00s linear infinite; }
+    .C52 { animation: C52 19.22s linear infinite; }
     @keyframes C53 {
-      0%, 70.50% { fill: #262430; fill-opacity: 0.48; }
-      71.17%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 81.59% { fill: #262430; fill-opacity: 0.48; }
+      82.00%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C53 { animation: C53 12.00s linear infinite; }
+    .C53 { animation: C53 19.22s linear infinite; }
     @keyframes C54 {
-      0%, 70.17% { fill: #262430; fill-opacity: 0.48; }
-      70.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 81.38% { fill: #262430; fill-opacity: 0.48; }
+      81.79%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C54 { animation: C54 12.00s linear infinite; }
+    .C54 { animation: C54 19.22s linear infinite; }
     @keyframes C55 {
-      0%, 71.50% { fill: #262430; fill-opacity: 0.48; }
-      72.17%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.21% { fill: #262430; fill-opacity: 0.48; }
+      82.63%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C55 { animation: C55 12.00s linear infinite; }
+    .C55 { animation: C55 19.22s linear infinite; }
     @keyframes C56 {
-      0%, 71.50% { fill: #262430; fill-opacity: 0.48; }
-      72.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.21% { fill: #262430; fill-opacity: 0.48; }
+      82.63%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C56 { animation: C56 12.00s linear infinite; }
+    .C56 { animation: C56 19.22s linear infinite; }
     @keyframes C57 {
-      0%, 70.17% { fill: #262430; fill-opacity: 0.48; }
-      70.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 81.38% { fill: #262430; fill-opacity: 0.48; }
+      81.79%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C57 { animation: C57 12.00s linear infinite; }
+    .C57 { animation: C57 19.22s linear infinite; }
     @keyframes C58 {
-      0%, 70.83% { fill: #262430; fill-opacity: 0.48; }
-      71.50%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 81.79% { fill: #262430; fill-opacity: 0.48; }
+      82.21%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C58 { animation: C58 12.00s linear infinite; }
+    .C58 { animation: C58 19.22s linear infinite; }
     @keyframes C59 {
-      0%, 71.17% { fill: #262430; fill-opacity: 0.48; }
-      71.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.00% { fill: #262430; fill-opacity: 0.48; }
+      82.42%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C59 { animation: C59 12.00s linear infinite; }
+    .C59 { animation: C59 19.22s linear infinite; }
     @keyframes C60 {
-      0%, 72.17% { fill: #262430; fill-opacity: 0.48; }
-      72.83%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.63% { fill: #262430; fill-opacity: 0.48; }
+      83.04%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C60 { animation: C60 12.00s linear infinite; }
+    .C60 { animation: C60 19.22s linear infinite; }
     @keyframes C61 {
-      0%, 70.50% { fill: #262430; fill-opacity: 0.48; }
-      71.17%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 81.59% { fill: #262430; fill-opacity: 0.48; }
+      82.00%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C61 { animation: C61 12.00s linear infinite; }
+    .C61 { animation: C61 19.22s linear infinite; }
     @keyframes C62 {
-      0%, 72.50% { fill: #262430; fill-opacity: 0.48; }
-      73.17%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.83% { fill: #262430; fill-opacity: 0.48; }
+      83.25%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C62 { animation: C62 12.00s linear infinite; }
+    .C62 { animation: C62 19.22s linear infinite; }
     @keyframes C63 {
-      0%, 71.50% { fill: #262430; fill-opacity: 0.48; }
-      72.17%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.21% { fill: #262430; fill-opacity: 0.48; }
+      82.63%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C63 { animation: C63 12.00s linear infinite; }
+    .C63 { animation: C63 19.22s linear infinite; }
     @keyframes C64 {
-      0%, 72.83% { fill: #262430; fill-opacity: 0.48; }
-      73.50%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.04% { fill: #262430; fill-opacity: 0.48; }
+      83.46%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C64 { animation: C64 12.00s linear infinite; }
+    .C64 { animation: C64 19.22s linear infinite; }
     @keyframes C65 {
-      0%, 72.50% { fill: #262430; fill-opacity: 0.48; }
-      73.17%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.83% { fill: #262430; fill-opacity: 0.48; }
+      83.25%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C65 { animation: C65 12.00s linear infinite; }
+    .C65 { animation: C65 19.22s linear infinite; }
     @keyframes C66 {
-      0%, 71.83% { fill: #262430; fill-opacity: 0.48; }
-      72.50%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.42% { fill: #262430; fill-opacity: 0.48; }
+      82.83%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C66 { animation: C66 12.00s linear infinite; }
+    .C66 { animation: C66 19.22s linear infinite; }
     @keyframes C67 {
-      0%, 72.17% { fill: #262430; fill-opacity: 0.48; }
-      72.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.63% { fill: #262430; fill-opacity: 0.48; }
+      83.04%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C67 { animation: C67 12.00s linear infinite; }
+    .C67 { animation: C67 19.22s linear infinite; }
     @keyframes C68 {
-      0%, 72.83% { fill: #262430; fill-opacity: 0.48; }
-      73.50%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.04% { fill: #262430; fill-opacity: 0.48; }
+      83.46%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C68 { animation: C68 12.00s linear infinite; }
+    .C68 { animation: C68 19.22s linear infinite; }
     @keyframes C69 {
-      0%, 71.83% { fill: #262430; fill-opacity: 0.48; }
-      72.50%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.42% { fill: #262430; fill-opacity: 0.48; }
+      82.83%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C69 { animation: C69 12.00s linear infinite; }
+    .C69 { animation: C69 19.22s linear infinite; }
     @keyframes C70 {
-      0%, 73.17% { fill: #262430; fill-opacity: 0.48; }
-      73.83%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.25% { fill: #262430; fill-opacity: 0.48; }
+      83.67%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C70 { animation: C70 12.00s linear infinite; }
+    .C70 { animation: C70 19.22s linear infinite; }
     @keyframes C71 {
-      0%, 72.17% { fill: #262430; fill-opacity: 0.48; }
-      72.83%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.63% { fill: #262430; fill-opacity: 0.48; }
+      83.04%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C71 { animation: C71 12.00s linear infinite; }
+    .C71 { animation: C71 19.22s linear infinite; }
     @keyframes C72 {
-      0%, 71.83% { fill: #262430; fill-opacity: 0.48; }
-      72.50%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.42% { fill: #262430; fill-opacity: 0.48; }
+      82.83%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C72 { animation: C72 12.00s linear infinite; }
+    .C72 { animation: C72 19.22s linear infinite; }
     @keyframes C73 {
-      0%, 73.50% { fill: #262430; fill-opacity: 0.48; }
-      74.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.46% { fill: #262430; fill-opacity: 0.48; }
+      83.88%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C73 { animation: C73 12.00s linear infinite; }
+    .C73 { animation: C73 19.22s linear infinite; }
     @keyframes C74 {
-      0%, 72.50% { fill: #262430; fill-opacity: 0.48; }
-      73.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 82.83% { fill: #262430; fill-opacity: 0.48; }
+      83.25%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C74 { animation: C74 12.00s linear infinite; }
+    .C74 { animation: C74 19.22s linear infinite; }
     @keyframes C75 {
-      0%, 73.17% { fill: #262430; fill-opacity: 0.48; }
-      73.83%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.25% { fill: #262430; fill-opacity: 0.48; }
+      83.67%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C75 { animation: C75 12.00s linear infinite; }
+    .C75 { animation: C75 19.22s linear infinite; }
     @keyframes C76 {
-      0%, 73.83% { fill: #262430; fill-opacity: 0.48; }
-      74.50%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.67% { fill: #262430; fill-opacity: 0.48; }
+      84.08%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C76 { animation: C76 12.00s linear infinite; }
+    .C76 { animation: C76 19.22s linear infinite; }
     @keyframes C77 {
-      0%, 72.83% { fill: #262430; fill-opacity: 0.48; }
-      73.50%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.04% { fill: #262430; fill-opacity: 0.48; }
+      83.46%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C77 { animation: C77 12.00s linear infinite; }
+    .C77 { animation: C77 19.22s linear infinite; }
     @keyframes C78 {
-      0%, 73.50% { fill: #262430; fill-opacity: 0.48; }
-      74.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.46% { fill: #262430; fill-opacity: 0.48; }
+      83.88%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C78 { animation: C78 12.00s linear infinite; }
+    .C78 { animation: C78 19.22s linear infinite; }
     @keyframes C79 {
-      0%, 74.50% { fill: #262430; fill-opacity: 0.48; }
-      75.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 84.08% { fill: #262430; fill-opacity: 0.48; }
+      84.50%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C79 { animation: C79 12.00s linear infinite; }
+    .C79 { animation: C79 19.22s linear infinite; }
     @keyframes C80 {
-      0%, 74.50% { fill: #262430; fill-opacity: 0.48; }
-      75.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 84.08% { fill: #262430; fill-opacity: 0.48; }
+      84.50%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C80 { animation: C80 12.00s linear infinite; }
+    .C80 { animation: C80 19.22s linear infinite; }
     @keyframes C81 {
-      0%, 74.83% { fill: #262430; fill-opacity: 0.48; }
-      75.50%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 84.29% { fill: #262430; fill-opacity: 0.48; }
+      84.71%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C81 { animation: C81 12.00s linear infinite; }
+    .C81 { animation: C81 19.22s linear infinite; }
     @keyframes C82 {
-      0%, 73.83% { fill: #262430; fill-opacity: 0.48; }
-      74.50%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.67% { fill: #262430; fill-opacity: 0.48; }
+      84.08%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C82 { animation: C82 12.00s linear infinite; }
+    .C82 { animation: C82 19.22s linear infinite; }
     @keyframes C83 {
-      0%, 73.50% { fill: #262430; fill-opacity: 0.48; }
-      74.17%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.46% { fill: #262430; fill-opacity: 0.48; }
+      83.88%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C83 { animation: C83 12.00s linear infinite; }
+    .C83 { animation: C83 19.22s linear infinite; }
     @keyframes C84 {
-      0%, 74.50% { fill: #262430; fill-opacity: 0.48; }
-      75.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 84.08% { fill: #262430; fill-opacity: 0.48; }
+      84.50%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C84 { animation: C84 12.00s linear infinite; }
+    .C84 { animation: C84 19.22s linear infinite; }
     @keyframes C85 {
-      0%, 73.83% { fill: #262430; fill-opacity: 0.48; }
-      74.50%, 95.83% { fill: #3a3152; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.67% { fill: #262430; fill-opacity: 0.48; }
+      84.08%, 97.40% { fill: #3a3152; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C85 { animation: C85 12.00s linear infinite; }
+    .C85 { animation: C85 19.22s linear infinite; }
     @keyframes C86 {
-      0%, 74.17% { fill: #262430; fill-opacity: 0.48; }
-      74.83%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.88% { fill: #262430; fill-opacity: 0.48; }
+      84.29%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C86 { animation: C86 12.00s linear infinite; }
+    .C86 { animation: C86 19.22s linear infinite; }
     @keyframes C87 {
-      0%, 74.17% { fill: #262430; fill-opacity: 0.48; }
-      74.83%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.88% { fill: #262430; fill-opacity: 0.48; }
+      84.29%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C87 { animation: C87 12.00s linear infinite; }
+    .C87 { animation: C87 19.22s linear infinite; }
     @keyframes C88 {
-      0%, 75.17% { fill: #262430; fill-opacity: 0.48; }
-      75.83%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 84.50% { fill: #262430; fill-opacity: 0.48; }
+      84.92%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C88 { animation: C88 12.00s linear infinite; }
+    .C88 { animation: C88 19.22s linear infinite; }
     @keyframes C89 {
-      0%, 74.17% { fill: #262430; fill-opacity: 0.48; }
-      74.83%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 83.88% { fill: #262430; fill-opacity: 0.48; }
+      84.29%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C89 { animation: C89 12.00s linear infinite; }
+    .C89 { animation: C89 19.22s linear infinite; }
     @keyframes C90 {
-      0%, 74.83% { fill: #262430; fill-opacity: 0.48; }
-      75.50%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 84.29% { fill: #262430; fill-opacity: 0.48; }
+      84.71%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C90 { animation: C90 12.00s linear infinite; }
+    .C90 { animation: C90 19.22s linear infinite; }
     @keyframes C91 {
-      0%, 74.83% { fill: #262430; fill-opacity: 0.48; }
-      75.50%, 95.83% { fill: #7c6bb0; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 84.29% { fill: #262430; fill-opacity: 0.48; }
+      84.71%, 97.40% { fill: #7c6bb0; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C91 { animation: C91 12.00s linear infinite; }
+    .C91 { animation: C91 19.22s linear infinite; }
     @keyframes C92 {
-      0%, 75.50% { fill: #262430; fill-opacity: 0.48; }
-      76.17%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 84.71% { fill: #262430; fill-opacity: 0.48; }
+      85.12%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C92 { animation: C92 12.00s linear infinite; }
+    .C92 { animation: C92 19.22s linear infinite; }
     @keyframes C93 {
-      0%, 75.17% { fill: #262430; fill-opacity: 0.48; }
-      75.83%, 95.83% { fill: #5c4d86; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 84.50% { fill: #262430; fill-opacity: 0.48; }
+      84.92%, 97.40% { fill: #5c4d86; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C93 { animation: C93 12.00s linear infinite; }
+    .C93 { animation: C93 19.22s linear infinite; }
     @keyframes C94 {
-      0%, 75.50% { fill: #262430; fill-opacity: 0.48; }
-      76.17%, 95.83% { fill: #a78bfa; fill-opacity: 1; }
-      97.50%, 100% { fill: #262430; fill-opacity: 0.48; }
+      0%, 84.71% { fill: #262430; fill-opacity: 0.48; }
+      85.12%, 97.40% { fill: #a78bfa; fill-opacity: 1; }
+      98.44%, 100% { fill: #262430; fill-opacity: 0.48; }
     }
-    .C94 { animation: C94 12.00s linear infinite; }
+    .C94 { animation: C94 19.22s linear infinite; }
   </style>
   <rect x="1" y="1" width="878" height="190" rx="8" fill="#0c0b12" stroke="#24202c" stroke-width="1"/>
   <g id="letters">
