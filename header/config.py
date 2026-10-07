@@ -28,9 +28,9 @@ CUBE_STROKE_OPACITY = 0.5
 LEVELS = ["#3a3152", "#5c4d86", "#7c6bb0", "#a78bfa"]
 TEXT = LEVELS[-1]
 MUTED = LEVELS[-1]
-SNAKE = "#ddd6fe"  # brighter than L4 contributions so the head reads
-# platane/snk is ~276ms/step; faster on average (jitter in eater).
-EAT_STEP = 0.12
+SNAKE = LEVELS[-1]  # same violet as L4 cubes / letters
+# platane/snk default: 100ms per cell, linear, no jitter.
+EAT_STEP = 0.1
 
 FONT = "Menlo, SF Mono, Monaco, ui-monospace, monospace"
 LINE1 = "hi there!"
@@ -43,18 +43,19 @@ Y1 = OY + GRID_H * 0.42
 X2 = OX + GRID_W * 0.88
 Y2 = OY + GRID_H * 0.72
 
-CHAR_IN = 0.12
-CHAR_DEL = 0.035
+CHAR_IN = 0.10
+CHAR_DEL = 0.028
 CHAR_OUT = 0.04
 LINE_PAUSE = 0.45
 START_S = 0.25
 READ_1 = 0.75
 GAP = 0.2
 HOLD_S = 3.2
-CUBE_HOLD = 2.8
+CUBE_HOLD = 0.08
 REST = 0.88
 
-# Exact snk snake parts: head largest, tail smallest, extra-round.
+# platane/snk parts: head largest, tail smallest, extra-round. Size is fixed;
+# disappearing is opacity only.
 SNAKE_PARTS = (
     ("s0", 14.4, 4.5),
     ("s1", 12.3, 4.1),

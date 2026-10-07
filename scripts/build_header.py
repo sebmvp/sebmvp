@@ -59,12 +59,9 @@ def main(argv=None):
     _fills, path, times, _eaten, total = plan(args.source, random.Random(seed))
     print("wrote %s (%d bytes) seed=%s source=%s" % (out, out.stat().st_size, seed, args.source))
     print("loop %.1fs until hi there restarts:" % total)
-    n_steps = len(path)
-    segs = phases(n_steps)
-    # snake duration follows actual jittered steps, not n * EAT_STEP
-    eat0 = eat_start()
+    eat0 = times[0] if times else eat_start()
     eat1 = times[-1] if times else eat0
-    for name, a, b in segs:
+    for name, a, b in phases(len(path)):
         if name == "snake eats":
             a, b = eat0, eat1
         elif name == "reset":

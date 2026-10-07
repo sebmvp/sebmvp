@@ -48,22 +48,25 @@ def simulate(rng):
             assigned[(c0, r0)] = (t, rng.choice(C.LEVELS[2:]))
         near = [p for p in neighborhood(c0, r0, 1) if p not in taken]
         rng.shuffle(near)
-        for cell in near[:2]:
+        for cell in near[:3]:
             taken.add(cell)
             assigned[cell] = (t, rng.choice(C.LEVELS[1:]))
 
         for r in range(C.ROWS):
-            for dc in (-1, 0, 1):
+            for dc in (-2, -1, 0, 1, 2):
                 c = c0 + dc
                 if not C.cell_exists(c, r) or (c, r) in taken:
                     continue
                 d_row = abs(r - r0)
-                if d_row == 0:
+                d_col = abs(dc)
+                if d_row == 0 and d_col <= 1:
                     continue
-                if dc == 0:
-                    p = 0.7 * (0.55 ** (d_row - 1))
+                if d_col == 0:
+                    p = 0.82 * (0.62 ** max(d_row - 1, 0))
+                elif d_col == 1:
+                    p = 0.48 * (0.55 ** d_row)
                 else:
-                    p = 0.32 * (0.48 ** d_row)
+                    p = 0.26 * (0.5 ** d_row)
                 if rng.random() >= p:
                     continue
                 taken.add((c, r))

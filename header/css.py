@@ -94,39 +94,58 @@ def cube_css(idx, fill_at, eat_at, color, total):
     )
 
 
+def _corners(path):
+    """Keep endpoints and turns. CSS linear-interpolates the long runs, like snk."""
+    if len(path) <= 2:
+        return list(range(len(path)))
+    keep = [0]
+    for i in range(1, len(path) - 1):
+        a, u, b = path[i - 1], path[i], path[i + 1]
+        if abs((a[0] + b[0]) / 2.0 - u[0]) < 0.01 and abs(
+            (a[1] + b[1]) / 2.0 - u[1]
+        ) < 0.01:
+            continue
+        keep.append(i)
+    keep.append(len(path) - 1)
+    return keep
+
+
 def snake_css(path, times, total, lag=0, name="s0"):
     """One snk-style body part. `lag` cells behind the head. Orthogonal slides."""
     if len(path) <= lag:
         return ""
-    steps = []
+    body = []
+    body_times = []
     for i in range(lag, len(path)):
-        x, y = cell_xy(*path[i - lag])
-        steps.append((pct(times[i], total), x, y))
-    if not steps:
+        body.append(path[i - lag])
+        body_times.append(times[i])
+    if not body:
         return ""
+    idxs = _corners(body)
+    n = max(len(body) - 1, 1)
     percents = bump(
-        [pct(times[lag], total)]
-        + [s[0] for s in steps]
-        + [pct(times[-1] + 0.2, total)]
+        [pct(body_times[0], total)]
+        + [pct(body_times[i], total) for i in idxs]
+        + [pct(body_times[-1] + 0.2, total)]
     )
     hidden_p = percents[0]
     gone_p = percents[-1]
-    x0, y0 = steps[0][1], steps[0][2]
-    n = max(len(steps) - 1, 1)
+    x0, y0 = cell_xy(*body[0])
     frames = [
         "      0%%, %.2f%% { opacity: 0; transform: translate(%.1fpx, %.1fpx); }"
         % (hidden_p, x0, y0)
     ]
-    for j, ((_p, x, y), kp) in enumerate(zip(steps, percents[1:-1])):
-        # Ease-in fade: stays readable, then drops fast, 0 on the last box.
-        fade = 1.0 - (float(j) / n) ** 3
-        if j == n:
+    for k, i in enumerate(idxs):
+        x, y = cell_xy(*body[i])
+        fade = 1.0 - (float(i) / n) ** 3
+        if i == n:
             fade = 0.0
+        kp = percents[1 + k]
         frames.append(
             "      %.2f%% { opacity: %.3f; transform: translate(%.1fpx, %.1fpx); }"
             % (kp, fade, x, y)
         )
-    lx, ly = steps[-1][1], steps[-1][2]
+    lx, ly = cell_xy(*body[-1])
     frames.append(
         "      %.2f%%, 100%% { opacity: 0; transform: translate(%.1fpx, %.1fpx); }"
         % (gone_p, lx, ly)

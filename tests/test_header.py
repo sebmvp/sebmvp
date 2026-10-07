@@ -22,6 +22,7 @@ class TimelineTests(unittest.TestCase):
         self.assertLess(T.delete_start(), T.type2_start())
         self.assertLess(T.type2_end(), T.convert_start())
         self.assertLess(T.convert_end(), T.eat_start())
+        self.assertLess(T.eat_start() - T.convert_end(), 0.2)
         self.assertLess(T.eat_start(), T.total_s(10))
 
 
@@ -57,7 +58,7 @@ class ContributionTests(unittest.TestCase):
         self.assertGreater(last - first, 10)
         for c, r in fills:
             nearest = min(abs(c - lc) for lc in cols)
-            self.assertLessEqual(nearest, 1)
+            self.assertLessEqual(nearest, 2)
 
     def test_github_not_implemented(self):
         with self.assertRaises(NotImplementedError):
@@ -69,17 +70,23 @@ class ContributionTests(unittest.TestCase):
 
 
 class EaterTests(unittest.TestCase):
-    def test_enters_from_the_right(self):
+    def test_enters_from_bottom_of_leftover_week(self):
         cells = [(10, 2), (40, 1), (C.COLS - 1, 0)]
         path = eat_path(cells, random.Random(0))
-        self.assertEqual(path[0][0], C.COLS)
-        self.assertIn(path[0][1], range(C.LAST_WEEK_DAYS))
+        self.assertEqual(path[0], (C.COLS - 1, C.LAST_WEEK_DAYS))
+        self.assertEqual(path[1], (C.COLS - 1, C.LAST_WEEK_DAYS - 1))
 
     def test_steps_are_orthogonal(self):
         fills = simulate(random.Random(3))
         path = eat_path(list(fills), random.Random(3))
         for a, b in zip(path, path[1:]):
             self.assertEqual(abs(a[0] - b[0]) + abs(a[1] - b[1]), 1)
+
+    def test_escapes_the_grid(self):
+        fills = simulate(random.Random(3))
+        path = eat_path(list(fills), random.Random(3))
+        outside = [p for p in path if not C.cell_exists(*p)]
+        self.assertGreaterEqual(len(outside), 2)
 
     def test_visits_every_filled_cell(self):
         cells = [(0, 0), (3, 1), (1, 2), (8, 4)]
@@ -93,6 +100,17 @@ class EaterTests(unittest.TestCase):
         self.assertNotEqual(a, b)
         self.assertTrue(set(cells).issubset(set(a)))
         self.assertTrue(set(cells).issubset(set(b)))
+
+    def test_eat_steps_speed_up_as_it_fades(self):
+        fills = simulate(random.Random(3))
+        path = eat_path(list(fills), random.Random(3))
+        times = step_times(path, random.Random(3))
+        self.assertEqual(len(times), len(path))
+        dts = [b - a for a, b in zip(times, times[1:])]
+        self.assertTrue(dts)
+        self.assertGreater(dts[0], dts[-1])
+        self.assertAlmostEqual(dts[0], C.EAT_STEP, delta=0.02)
+        self.assertLess(dts[-1], C.EAT_STEP * 0.7)
 
     def test_eat_times_cover_fills(self):
         fills = [(0, 0), (2, 0), (4, 1)]
@@ -109,6 +127,8 @@ class RenderTests(unittest.TestCase):
         self.assertIn("@keyframes L0", svg)
         self.assertIn("@keyframes s0", svg)
         self.assertIn('id="snake"', svg)
+        self.assertIn('width="14.4"', svg)
+        self.assertIn('fill="%s"' % C.SNAKE, svg)
         self.assertTrue(svg.startswith("<svg"))
         self.assertGreaterEqual(svg.count("<rect"), 50)
 
