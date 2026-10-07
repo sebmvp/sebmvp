@@ -16,8 +16,9 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from header.eater import eat_path
 from header.render import build, write  # noqa: E402
-from header.timeline import total_s  # noqa: E402
+from header.timeline import phases, total_s  # noqa: E402
 
 
 def parse_args(argv):
@@ -56,11 +57,13 @@ def main(argv=None):
         print(exc, file=sys.stderr)
         return 2
     out = write(svg)
-    n_filled = svg.count("animation: C")
-    print(
-        "wrote %s (%d bytes) seed=%s source=%s loop=%.1fs"
-        % (out, out.stat().st_size, seed, args.source, total_s(max(n_filled, 1)))
-    )
+    from header.contributions import load as load_fills
+
+    n_steps = len(eat_path(list(load_fills(args.source, random.Random(seed)))))
+    print("wrote %s (%d bytes) seed=%s source=%s" % (out, out.stat().st_size, seed, args.source))
+    print("loop %.1fs until hi there restarts:" % total_s(n_steps))
+    for name, a, b in phases(n_steps):
+        print("  %4.1f–%5.1fs  %s  (%.1fs)" % (a, b, name, b - a))
     return 0
 
 

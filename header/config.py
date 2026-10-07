@@ -7,6 +7,8 @@ OUT = ROOT / "assets/profile-header.svg"
 
 W, H = 880, 192
 COLS, ROWS = 53, 7
+# GitHub's last week is incomplete (not a full rectangle). Snake enters here.
+LAST_WEEK_DAYS = 3
 SIZE, GAP = 12, 4
 PITCH = SIZE + GAP
 RX = 2
@@ -48,5 +50,22 @@ READ_1 = 0.75
 GAP = 0.2
 HOLD_S = 3.2
 CUBE_HOLD = 2.8
-EAT_STEP = 0.055
+# platane/snk is ~276ms/step; a bit faster.
+EAT_STEP = 0.22
 REST = 0.88
+
+# Exact snk snake parts: head largest, tail smallest, extra-round.
+SNAKE_PARTS = (
+    ("s0", 14.4, 4.5),
+    ("s1", 12.3, 4.1),
+    ("s2", 10.8, 3.6),
+    ("s3", 9.9, 3.3),
+)
+
+
+def cell_exists(c, r):
+    if c < 0 or c >= COLS or r < 0 or r >= ROWS:
+        return False
+    if c == COLS - 1 and r >= LAST_WEEK_DAYS:
+        return False
+    return True

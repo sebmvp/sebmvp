@@ -39,12 +39,27 @@ def eat_start():
     return convert_end() + C.CUBE_HOLD
 
 
-def eat_end(n_filled):
-    return eat_start() + max(n_filled, 1) * C.EAT_STEP
+def eat_end(n_steps):
+    return eat_start() + max(n_steps, 1) * C.EAT_STEP
 
 
-def total_s(n_filled):
-    return eat_end(n_filled) + 0.6
+def total_s(n_steps):
+    return eat_end(n_steps) + 0.6
+
+
+def phases(n_steps):
+    """Named segments of one loop, seconds from t=0."""
+    return [
+        ("type in", 0.0, type1_end()),
+        ("hold", type1_end(), delete_start()),
+        ("delete", delete_start(), type2_start()),
+        ("type in again", type2_start(), type2_end()),
+        ("hold message", type2_end(), convert_start()),
+        ("letters → cubes", convert_start(), convert_end()),
+        ("graph sits", convert_end(), eat_start()),
+        ("snake eats", eat_start(), eat_end(n_steps)),
+        ("reset", eat_end(n_steps), total_s(n_steps)),
+    ]
 
 
 def letter_offset(index):

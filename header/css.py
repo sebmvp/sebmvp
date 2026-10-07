@@ -94,26 +94,24 @@ def cube_css(idx, fill_at, eat_at, color, total):
     )
 
 
-def snake_css(path, eat_times, total, lag=0):
-    """Head (lag=0) or a tail segment `lag` cells behind."""
-    if not path:
+def snake_css(path, times, total, lag=0, name="s0"):
+    """One snk-style body part. `lag` cells behind the head. Orthogonal slides."""
+    if len(path) <= lag:
         return ""
-    name = "H" if lag == 0 else "T%d" % lag
-    start = eat_times[path[min(lag, len(path) - 1)]]
-    end = eat_times[path[-1]]
-    x0, y0 = cell_xy(*path[0])
     steps = []
-    for i, _cell in enumerate(path):
-        if i < lag:
-            continue
-        src = path[i - lag]
-        x, y = cell_xy(*src)
-        steps.append((pct(eat_times[path[i]], total), x, y))
+    for i in range(lag, len(path)):
+        x, y = cell_xy(*path[i - lag])
+        steps.append((pct(times[i], total), x, y))
     if not steps:
         return ""
-    percents = bump([pct(start, total)] + [s[0] for s in steps] + [pct(end + 0.15, total)])
+    percents = bump(
+        [pct(times[lag], total)]
+        + [s[0] for s in steps]
+        + [pct(times[-1] + 0.2, total)]
+    )
     hidden_p = percents[0]
     gone_p = percents[-1]
+    x0, y0 = steps[0][1], steps[0][2]
     frames = [
         "      0%%, %.2f%% { opacity: 0; transform: translate(%.1fpx, %.1fpx); }"
         % (hidden_p, x0, y0)

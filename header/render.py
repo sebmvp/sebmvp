@@ -5,7 +5,7 @@ from xml.sax.saxutils import escape
 from header import config as C
 from header.contributions import load
 from header.css import cube_css, letter_css, snake_css
-from header.eater import eat_path, eat_times
+from header.eater import eat_path, eat_times, step_times
 from header.glyphs import glyphs
 from header.timeline import total_s
 
@@ -15,13 +15,14 @@ def build(preview=None, source="simulated", rng=None):
         raise ValueError("rng is required")
     fills = load(source, rng)
     path = eat_path(list(fills))
-    eaten = eat_times(path)
-    total = total_s(len(fills))
+    times = step_times(path)
+    eaten = eat_times(path, fills)
+    total = total_s(len(path))
     letters = glyphs()
 
     css = [
         "    text { font-family: Menlo, 'SF Mono', Monaco, ui-monospace, monospace; }",
-        "    .H, .T1, .T2 { transform-box: fill-box; transform-origin: 0 0; }",
+        "    .s0, .s1, .s2, .s3 { transform-box: fill-box; transform-origin: 0 0; }",
     ]
     if preview is None:
         for g in letters:
@@ -36,9 +37,8 @@ def build(preview=None, source="simulated", rng=None):
         idx += 1
 
     if preview is None and path:
-        css.append(snake_css(path, eaten, total, lag=0).rstrip())
-        css.append(snake_css(path, eaten, total, lag=1).rstrip())
-        css.append(snake_css(path, eaten, total, lag=2).rstrip())
+        for lag, (name, _dim, _rx) in enumerate(C.SNAKE_PARTS):
+            css.append(snake_css(path, times, total, lag=lag, name=name).rstrip())
 
     lines = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" '
@@ -77,6 +77,8 @@ def build(preview=None, source="simulated", rng=None):
 
     for r in range(C.ROWS):
         for c in range(C.COLS):
+            if not C.cell_exists(c, r):
+                continue
             x = C.OX + c * C.PITCH
             y = C.OY + r * C.PITCH
             event = cube_class.get((c, r))
@@ -110,12 +112,12 @@ def build(preview=None, source="simulated", rng=None):
 
     if preview is None:
         lines.append('  <g id="snake">')
-        for cls, op, dim in (("T2", 0.28, 10), ("T1", 0.5, 11), ("H", 1.0, 14)):
+        for name, dim, rx in C.SNAKE_PARTS:
             off = (C.SIZE - dim) / 2.0
             lines.append(
-                '    <rect class="%s" x="%.2f" y="%.2f" width="%d" height="%d" '
-                'rx="3" fill="%s" fill-opacity="%.2f" opacity="0"/>'
-                % (cls, off, off, dim, dim, C.SNAKE, op)
+                '    <rect class="%s" x="%.2f" y="%.2f" width="%.1f" height="%.1f" '
+                'rx="%.1f" ry="%.1f" fill="%s" opacity="0"/>'
+                % (name, off, off, dim, dim, rx, rx, C.SNAKE)
             )
         lines.append("  </g>")
 

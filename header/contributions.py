@@ -22,7 +22,7 @@ def neighborhood(c, r, radius):
     for dr in range(-radius, radius + 1):
         for dc in range(-radius, radius + 1):
             cc, rr = c + dc, r + dr
-            if 0 <= cc < C.COLS and 0 <= rr < C.ROWS:
+            if 0 <= cc < C.COLS and 0 <= rr < C.ROWS and C.cell_exists(cc, rr):
                 cells.append((cc, rr))
     return cells
 
@@ -41,6 +41,8 @@ def simulate(rng):
     for i, (x, y) in enumerate(letter_centers()):
         t = start + i * C.CHAR_OUT
         c0, r0 = cell_at(x, y)
+        if not C.cell_exists(c0, r0):
+            continue
         cores.append((c0, r0, t))
         if (c0, r0) not in taken:
             taken.add((c0, r0))
@@ -51,12 +53,15 @@ def simulate(rng):
             taken.add(cell)
             assigned[cell] = (t, rng.choice(C.LEVELS[1:]))
 
+    if not cores:
+        return assigned
+
     def nearest(cell):
         return min(max(abs(cell[0] - c), abs(cell[1] - r)) for c, r, _ in cores)
 
     for r in range(C.ROWS):
         for c in range(C.COLS):
-            if (c, r) in taken:
+            if (c, r) in taken or not C.cell_exists(c, r):
                 continue
             d = nearest((c, r))
             if d < 2:
