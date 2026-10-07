@@ -71,21 +71,19 @@ def cube_css(idx, fill_at, eat_at, color, total):
     )
     return (
         "    @keyframes C%d {\n"
-        "      0%%, %.2f%% { fill: %s; fill-opacity: %.2f; }\n"
+        "      0%%, %.2f%% { fill: var(--ce); fill-opacity: %.2f; }\n"
         "      %.2f%%, %.2f%% { fill: %s; fill-opacity: 1; }\n"
-        "      %.2f%%, 100%% { fill: %s; fill-opacity: %.2f; }\n"
+        "      %.2f%%, 100%% { fill: var(--ce); fill-opacity: %.2f; }\n"
         "    }\n"
         "    .C%d { animation: C%d %.2fs linear infinite; }\n"
         % (
             idx,
             t,
-            C.CUBE,
             C.CUBE_OPACITY,
             on,
             eaten,
             color,
             gone,
-            C.CUBE,
             C.CUBE_OPACITY,
             idx,
             idx,

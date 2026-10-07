@@ -17,12 +17,13 @@ GRID_H = ROWS * PITCH - GAP
 OX = (W - GRID_W) / 2
 OY = (H - GRID_H) / 2
 
-CARD = "#0c0b12"
-BORDER = "#24202c"
-CUBE = "#262430"
-CUBE_OPACITY = 0.24
-CUBE_STROKE = "#2e2b38"
-CUBE_STROKE_OPACITY = 0.5
+# Empty cells match GitHub contribution squares so the SVG sits on the page,
+# not on a card. Dark/light via --ce in the SVG CSS.
+CUBE = "#161b22"
+CUBE_OPACITY = 0.62
+CUBE_STROKE = "#1b1f23"
+CUBE_STROKE_OPACITY = 0.06
+CUBE_LIGHT = "#ebedf0"
 
 # L1 dim → L4 brightest. Letters use L4.
 LEVELS = ["#3a3152", "#5c4d86", "#7c6bb0", "#a78bfa"]

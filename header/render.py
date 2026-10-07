@@ -26,6 +26,8 @@ def build(preview=None, source="simulated", rng=None):
     letters = glyphs()
 
     css = [
+        "    :root { --ce: %s; --cb: %s; }" % (C.CUBE_LIGHT, C.CUBE_STROKE),
+        "    @media (prefers-color-scheme: dark) { :root { --ce: %s; } }" % C.CUBE,
         "    text { font-family: Menlo, 'SF Mono', Monaco, ui-monospace, monospace; }",
         "    .s0, .s1, .s2, .s3 { transform-box: fill-box; transform-origin: 0 0; }",
     ]
@@ -54,9 +56,6 @@ def build(preview=None, source="simulated", rng=None):
         "  <style>",
         *css,
         "  </style>",
-        '  <rect x="1" y="1" width="%d" height="%d" rx="8" '
-        'fill="%s" stroke="%s" stroke-width="1"/>'
-        % (C.W - 2, C.H - 2, C.CARD, C.BORDER),
         '  <g id="letters">',
     ]
 
@@ -91,15 +90,15 @@ def build(preview=None, source="simulated", rng=None):
                 lines.append(
                     '    <rect x="%.1f" y="%.1f" width="%d" height="%d" '
                     'rx="%s" fill="%s" fill-opacity="1" '
-                    'stroke="%s" stroke-width="0.8"/>'
-                    % (x, y, C.SIZE, C.SIZE, C.RX, event[1], C.CUBE_STROKE)
+                    'stroke="var(--cb)" stroke-width="1"/>'
+                    % (x, y, C.SIZE, C.SIZE, C.RX, event[1])
                 )
                 continue
             cls = ' class="%s"' % event[0] if (preview is None and event) else ""
             lines.append(
                 '    <rect%s x="%.1f" y="%.1f" width="%d" height="%d" '
-                'rx="%s" fill="%s" fill-opacity="%.2f" '
-                'stroke="%s" stroke-opacity="%.2f" stroke-width="0.8"/>'
+                'rx="%s" fill="var(--ce)" fill-opacity="%.2f" '
+                'stroke="var(--cb)" stroke-opacity="%.2f" stroke-width="1"/>'
                 % (
                     cls,
                     x,
@@ -107,9 +106,7 @@ def build(preview=None, source="simulated", rng=None):
                     C.SIZE,
                     C.SIZE,
                     C.RX,
-                    C.CUBE,
                     C.CUBE_OPACITY,
-                    C.CUBE_STROKE,
                     C.CUBE_STROKE_OPACITY,
                 )
             )

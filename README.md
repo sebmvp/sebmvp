@@ -1,6 +1,6 @@
-<p align="center">
-  <img src="assets/profile-header.svg" alt="hi there! welcome to seb's portfolio" width="100%"/>
-</p>
+<div align="center">
+  <img src="assets/profile-header.svg" alt="hi there! welcome to seb's portfolio" />
+</div>
 
 `› currently:` reading · training · traveling · automating something that probably didn't need automating
 
