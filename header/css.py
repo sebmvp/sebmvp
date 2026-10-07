@@ -64,7 +64,7 @@ def cube_css(idx, fill_at, eat_at, color, total):
     t, on, eaten, gone = bump(
         [
             pct(fill_at, total),
-            pct(fill_at + 0.08, total),
+            pct(fill_at + 0.18, total),
             pct(eat_at, total),
             pct(eat_at + 0.08, total),
         ]

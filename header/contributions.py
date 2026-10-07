@@ -50,7 +50,7 @@ def simulate(rng):
         rng.shuffle(near)
         for cell in near[:3]:
             taken.add(cell)
-            assigned[cell] = (t, rng.choice(C.LEVELS[1:]))
+            assigned[cell] = (t + 0.05, rng.choice(C.LEVELS[1:]))
 
         for r in range(C.ROWS):
             for dc in (-2, -1, 0, 1, 2):
@@ -70,7 +70,7 @@ def simulate(rng):
                 if rng.random() >= p:
                     continue
                 taken.add((c, r))
-                assigned[(c, r)] = (t + d_row * C.CHAR_OUT * 0.35, pick_level(rng))
+                assigned[(c, r)] = (t + 0.08 + d_row * C.CHAR_OUT * 0.7, pick_level(rng))
     return assigned
 
 
