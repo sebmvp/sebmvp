@@ -28,7 +28,9 @@ CUBE_STROKE_OPACITY = 0.5
 LEVELS = ["#3a3152", "#5c4d86", "#7c6bb0", "#a78bfa"]
 TEXT = LEVELS[-1]
 MUTED = LEVELS[-1]
-SNAKE = LEVELS[-1]
+SNAKE = "#ddd6fe"  # brighter than L4 contributions so the head reads
+# platane/snk is ~276ms/step; faster on average (jitter in eater).
+EAT_STEP = 0.12
 
 FONT = "Menlo, SF Mono, Monaco, ui-monospace, monospace"
 LINE1 = "hi there!"
@@ -50,8 +52,6 @@ READ_1 = 0.75
 GAP = 0.2
 HOLD_S = 3.2
 CUBE_HOLD = 2.8
-# platane/snk is ~276ms/step; a bit faster.
-EAT_STEP = 0.22
 REST = 0.88
 
 # Exact snk snake parts: head largest, tail smallest, extra-round.

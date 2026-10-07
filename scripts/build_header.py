@@ -16,9 +16,8 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from header.eater import eat_path
-from header.render import build, write  # noqa: E402
-from header.timeline import phases, total_s  # noqa: E402
+from header.render import build, plan, write  # noqa: E402
+from header.timeline import eat_start, phases  # noqa: E402
 
 
 def parse_args(argv):
@@ -57,12 +56,19 @@ def main(argv=None):
         print(exc, file=sys.stderr)
         return 2
     out = write(svg)
-    from header.contributions import load as load_fills
-
-    n_steps = len(eat_path(list(load_fills(args.source, random.Random(seed)))))
+    _fills, path, times, _eaten, total = plan(args.source, random.Random(seed))
     print("wrote %s (%d bytes) seed=%s source=%s" % (out, out.stat().st_size, seed, args.source))
-    print("loop %.1fs until hi there restarts:" % total_s(n_steps))
-    for name, a, b in phases(n_steps):
+    print("loop %.1fs until hi there restarts:" % total)
+    n_steps = len(path)
+    segs = phases(n_steps)
+    # snake duration follows actual jittered steps, not n * EAT_STEP
+    eat0 = eat_start()
+    eat1 = times[-1] if times else eat0
+    for name, a, b in segs:
+        if name == "snake eats":
+            a, b = eat0, eat1
+        elif name == "reset":
+            a, b = eat1, total
         print("  %4.1f–%5.1fs  %s  (%.1fs)" % (a, b, name, b - a))
     return 0
 

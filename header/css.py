@@ -112,20 +112,20 @@ def snake_css(path, times, total, lag=0, name="s0"):
     hidden_p = percents[0]
     gone_p = percents[-1]
     x0, y0 = steps[0][1], steps[0][2]
+    n = max(len(steps) - 1, 1)
     frames = [
         "      0%%, %.2f%% { opacity: 0; transform: translate(%.1fpx, %.1fpx); }"
         % (hidden_p, x0, y0)
     ]
     for j, ((_p, x, y), kp) in enumerate(zip(steps, percents[1:-1])):
-        if j == 0:
-            frames.append(
-                "      %.2f%% { opacity: 1; transform: translate(%.1fpx, %.1fpx); }"
-                % (kp, x, y)
-            )
-        else:
-            frames.append(
-                "      %.2f%% { transform: translate(%.1fpx, %.1fpx); }" % (kp, x, y)
-            )
+        # Ease-in fade: stays readable, then drops fast, 0 on the last box.
+        fade = 1.0 - (float(j) / n) ** 3
+        if j == n:
+            fade = 0.0
+        frames.append(
+            "      %.2f%% { opacity: %.3f; transform: translate(%.1fpx, %.1fpx); }"
+            % (kp, fade, x, y)
+        )
     lx, ly = steps[-1][1], steps[-1][2]
     frames.append(
         "      %.2f%%, 100%% { opacity: 0; transform: translate(%.1fpx, %.1fpx); }"

@@ -1,9 +1,10 @@
 """Which cubes fill, and when.
 
-`simulated` (default): letter-shaped residue plus a halo. Seeded RNG so a
-build can be reproduced, or omitted so each build is a new spread.
+Each letter owns a narrow column band. Spread cubes stay in that vertical
+range so the dissolve reads as words turning into boxes, not cubes jumping
+across the grid. End layout is still sporadic.
 
-`github` is the next step: map sebmvp's real year onto this 53x7 grid.
+`github` is next: map sebmvp's real year onto this 53x7 grid.
 """
 
 from header import config as C
@@ -22,7 +23,7 @@ def neighborhood(c, r, radius):
     for dr in range(-radius, radius + 1):
         for dc in range(-radius, radius + 1):
             cc, rr = c + dc, r + dr
-            if 0 <= cc < C.COLS and 0 <= rr < C.ROWS and C.cell_exists(cc, rr):
+            if C.cell_exists(cc, rr):
                 cells.append((cc, rr))
     return cells
 
@@ -32,18 +33,16 @@ def pick_level(rng):
 
 
 def simulate(rng):
-    """Glyph cores stay readable; extra cubes halo outward from the words."""
+    """Per-letter vertical spray. No cube from 'h' landing under 'portfolio'."""
     start = convert_start()
     taken = set()
     assigned = {}
-    cores = []
 
     for i, (x, y) in enumerate(letter_centers()):
         t = start + i * C.CHAR_OUT
         c0, r0 = cell_at(x, y)
         if not C.cell_exists(c0, r0):
             continue
-        cores.append((c0, r0, t))
         if (c0, r0) not in taken:
             taken.add((c0, r0))
             assigned[(c0, r0)] = (t, rng.choice(C.LEVELS[2:]))
@@ -53,25 +52,22 @@ def simulate(rng):
             taken.add(cell)
             assigned[cell] = (t, rng.choice(C.LEVELS[1:]))
 
-    if not cores:
-        return assigned
-
-    def nearest(cell):
-        return min(max(abs(cell[0] - c), abs(cell[1] - r)) for c, r, _ in cores)
-
-    for r in range(C.ROWS):
-        for c in range(C.COLS):
-            if (c, r) in taken or not C.cell_exists(c, r):
-                continue
-            d = nearest((c, r))
-            if d < 2:
-                continue
-            p = 0.28 * (0.62 ** (d - 2))
-            if rng.random() >= p:
-                continue
-            t = start + min(d, 8) * C.CHAR_OUT * 0.7
-            taken.add((c, r))
-            assigned[(c, r)] = (t, pick_level(rng))
+        for r in range(C.ROWS):
+            for dc in (-1, 0, 1):
+                c = c0 + dc
+                if not C.cell_exists(c, r) or (c, r) in taken:
+                    continue
+                d_row = abs(r - r0)
+                if d_row == 0:
+                    continue
+                if dc == 0:
+                    p = 0.7 * (0.55 ** (d_row - 1))
+                else:
+                    p = 0.32 * (0.48 ** d_row)
+                if rng.random() >= p:
+                    continue
+                taken.add((c, r))
+                assigned[(c, r)] = (t + d_row * C.CHAR_OUT * 0.35, pick_level(rng))
     return assigned
 
 

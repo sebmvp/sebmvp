@@ -7,17 +7,22 @@ from header.contributions import load
 from header.css import cube_css, letter_css, snake_css
 from header.eater import eat_path, eat_times, step_times
 from header.glyphs import glyphs
-from header.timeline import total_s
+from header.timeline import eat_start
+
+
+def plan(source, rng):
+    fills = load(source, rng)
+    path = eat_path(list(fills), rng)
+    times = step_times(path, rng)
+    eaten = eat_times(path, fills, times)
+    total = times[-1] + 0.6 if times else eat_start() + 0.6
+    return fills, path, times, eaten, total
 
 
 def build(preview=None, source="simulated", rng=None):
     if rng is None:
         raise ValueError("rng is required")
-    fills = load(source, rng)
-    path = eat_path(list(fills))
-    times = step_times(path)
-    eaten = eat_times(path, fills)
-    total = total_s(len(path))
+    fills, path, times, eaten, total = plan(source, rng)
     letters = glyphs()
 
     css = [
