@@ -31,25 +31,27 @@ OY = (H - GRID_H) / 2
 
 CARD = "#0c0b12"
 BORDER = "#24202c"
-TEXT = "#b4adbf"
-MUTED = "#9a93a6"
 CUBE = "#262430"
-CUBE_OPACITY = 0.48
+CUBE_OPACITY = 0.24
 CUBE_STROKE = "#2e2b38"
+CUBE_STROKE_OPACITY = 0.5
 
 # GitHub-style contribution intensities, in this profile's violet.
+# L1 dim → L4 brightest. Letters use the highest (L4).
 LEVELS = ["#3a3152", "#5c4d86", "#7c6bb0", "#a78bfa"]
+TEXT = LEVELS[-1]
+MUTED = LEVELS[-1]
 
 FONT = "Menlo, SF Mono, Monaco, ui-monospace, monospace"
 LINE1 = "hi there!"
 LINE2 = "welcome to seb's portfolio"
-SIZE1, SIZE2 = 28, 22
-ADV1, ADV2 = 17.0, 13.0  # Menlo Regular advances
+SIZE1, SIZE2 = 28, 28
+ADV1, ADV2 = 17.0, 17.0  # Menlo Regular, same size both lines
 
 # Placement (keep — user signed off).
 X1 = OX + 56
 Y1 = OY + GRID_H * 0.42
-X2 = OX + GRID_W * 0.80
+X2 = OX + GRID_W * 0.88
 Y2 = OY + GRID_H * 0.72
 
 CHAR_IN = 0.12
@@ -60,7 +62,7 @@ START_S = 0.25
 READ_1 = 0.75  # beat after the first full message, then delete
 GAP = 0.2
 HOLD_S = 3.2  # sit on the second display before cubes
-CUBE_HOLD = 2.4
+CUBE_HOLD = 6.5  # graph stays up before the loop resets (eater comes later)
 REST = 0.88
 SEED = 2026
 
@@ -163,21 +165,51 @@ def neighborhood(c, r, radius):
     return cells
 
 
+def pick_level(rng):
+    # Real graphs are mostly quieter days. L4 is rare.
+    return rng.choices(LEVELS, weights=(4, 3, 2, 1))[0]
+
+
 def assign_cubes(rng):
+    """Glyph cells stay readable; extra cubes halo outward from the words.
+
+    Later: mix in Sebastian's real contribution year around this residue.
+    """
     start = convert_start()
     taken = set()
     assigned = {}
+    cores = []
+
     for i, (x, y) in enumerate(letter_centers()):
         t = start + i * CHAR_OUT
         c0, r0 = cell_at(x, y)
-        pool = [p for p in neighborhood(c0, r0, 2) if p not in taken]
-        if len(pool) < 2:
-            pool = [p for p in neighborhood(c0, r0, 3) if p not in taken]
-        n = rng.choice((2, 3))
-        rng.shuffle(pool)
-        for cell in pool[:n]:
+        cores.append((c0, r0, t))
+        if (c0, r0) not in taken:
+            taken.add((c0, r0))
+            assigned[(c0, r0)] = (t, rng.choice(LEVELS[2:]))
+        near = [p for p in neighborhood(c0, r0, 1) if p not in taken]
+        rng.shuffle(near)
+        for cell in near[:2]:
             taken.add(cell)
-            assigned[cell] = (t, rng.choice(LEVELS))
+            assigned[cell] = (t, rng.choice(LEVELS[1:]))
+
+    def nearest(cell):
+        return min(max(abs(cell[0] - c), abs(cell[1] - r)) for c, r, _ in cores)
+
+    for r in range(ROWS):
+        for c in range(COLS):
+            if (c, r) in taken:
+                continue
+            d = nearest((c, r))
+            if d < 2:
+                continue
+            # Falloff from the words: spread, not a full random year.
+            p = 0.28 * (0.62 ** (d - 2))
+            if rng.random() >= p:
+                continue
+            t = start + min(d, 8) * CHAR_OUT * 0.7
+            taken.add((c, r))
+            assigned[(c, r)] = (t, pick_level(rng))
     return assigned
 
 
@@ -309,7 +341,8 @@ def build(preview=None):
             lines.append(
                 f'    <rect{cls} x="{x:.1f}" y="{y:.1f}" width="{SIZE}" height="{SIZE}" '
                 f'rx="{RX}" fill="{CUBE}" fill-opacity="{CUBE_OPACITY}" '
-                f'stroke="{CUBE_STROKE}" stroke-width="0.8"/>'
+                f'stroke="{CUBE_STROKE}" stroke-opacity="{CUBE_STROKE_OPACITY}" '
+                f'stroke-width="0.8"/>'
             )
 
     lines.append("  </g>")
