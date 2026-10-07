@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile-header.svg" alt="Hi there. This is Seb's portfolio." width="100%"/>
+  <img src="assets/profile-header.svg" alt="hi there! welcome to seb's portfolio" width="100%"/>
 </p>
 
 `› currently:` reading · training · traveling · automating something that probably didn't need automating
