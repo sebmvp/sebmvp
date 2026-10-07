@@ -4,8 +4,10 @@
 Grid geometry matches aouellets/Platane snk: 880x192, 53x7, 12px cells,
 4px gap. Letters are real terminal type and do not follow the cube grid.
 
-Plays once: type in, hold, then each letter snaps off faster and fills
-a couple of nearby cubes at random contribution levels. No fade.
+Source of the animation is this file. It writes assets/profile-header.svg
+with indented CSS keyframes (same approach as the contribution snake, which
+Safari and GitHub actually play). Loop: type in, hold, letters snap into
+nearby contribution cubes, hold, reset.
 """
 
 import os
@@ -44,62 +46,85 @@ LINE2 = "welcome to seb's portfolio"
 SIZE1, SIZE2 = 28, 22
 ADV1, ADV2 = 17.0, 13.0  # Menlo Regular advances
 
+# Placement (keep — user signed off).
+X1 = OX + 56
+Y1 = OY + GRID_H * 0.42
+X2 = OX + GRID_W * 0.80
+Y2 = OY + GRID_H * 0.72
+
 CHAR_IN = 0.12
-CHAR_OUT = 0.04  # faster dissolve
+CHAR_OUT = 0.04
 LINE_PAUSE = 0.45
 START_S = 0.25
 HOLD_S = 2.8
+CUBE_HOLD = 2.4
 REST = 0.88
 SEED = 2026
 
 
-def type_end() -> float:
+def type_end():
     return START_S + len(LINE1) * CHAR_IN + LINE_PAUSE + len(LINE2) * CHAR_IN
 
 
-def convert_start() -> float:
+def convert_start():
     return type_end() + HOLD_S
 
 
-def total_s() -> float:
-    n = len(LINE1) + len(LINE2)
-    return convert_start() + n * CHAR_OUT + 0.35
+def convert_end():
+    return convert_start() + (len(LINE1) + len(LINE2)) * CHAR_OUT
 
 
-def letter_in_out(appear_s: float, out_s: float, total: float) -> str:
-    a = appear_s / total
-    snap_in = min(0.999, (appear_s + 0.04) / total)
-    o = out_s / total
-    snap_out = min(0.999, (out_s + 0.03) / total)
-    return (
-        f'<animate attributeName="opacity" '
-        f'values="0;0;{REST};{REST};0" '
-        f'keyTimes="0;{a:.4f};{snap_in:.4f};{o:.4f};{snap_out:.4f}" '
-        f'keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1" '
-        f'calcMode="spline" dur="{total:.2f}s" repeatCount="1" fill="freeze"/>'
-    )
+def total_s():
+    return convert_end() + CUBE_HOLD + 0.5
 
 
-def cube_fill_anim(at_s: float, color: str, total: float) -> str:
-    t = at_s / total
-    snap = min(0.999, (at_s + 0.12) / total)
-    return (
-        f'<animate attributeName="fill" values="{CUBE};{CUBE};{color}" '
-        f'keyTimes="0;{t:.4f};{snap:.4f}" dur="{total:.2f}s" '
-        f'repeatCount="1" fill="freeze"/>'
-        f'<animate attributeName="fill-opacity" values="{CUBE_OPACITY};{CUBE_OPACITY};1" '
-        f'keyTimes="0;{t:.4f};{snap:.4f}" dur="{total:.2f}s" '
-        f'repeatCount="1" fill="freeze"/>'
-    )
+def pct(seconds, total):
+    return max(0.0, min(100.0, 100.0 * seconds / total))
 
 
-def cell_at(x: float, y: float):
+def glyphs():
+    """One real character, with its own x/y. Spaces keep timing for cube fill."""
+    out = []
+    for i, ch in enumerate(LINE1):
+        out.append(
+            {
+                "ch": ch,
+                "x": X1 + i * ADV1,
+                "y": Y1,
+                "size": SIZE1,
+                "fill": TEXT,
+                "appear": START_S + i * CHAR_IN,
+                "index": i,
+            }
+        )
+    t2 = START_S + len(LINE1) * CHAR_IN + LINE_PAUSE
+    n2 = len(LINE2)
+    for i, ch in enumerate(LINE2):
+        out.append(
+            {
+                "ch": ch,
+                "x": X2 - (n2 - i) * ADV2,
+                "y": Y2,
+                "size": SIZE2,
+                "fill": MUTED,
+                "appear": t2 + i * CHAR_IN,
+                "index": len(LINE1) + i,
+            }
+        )
+    return out
+
+
+def letter_centers():
+    return [(g["x"] + (ADV1 if g["size"] == SIZE1 else ADV2) / 2, g["y"]) for g in glyphs()]
+
+
+def cell_at(x, y):
     c = int(round((x - OX) / PITCH))
     r = int(round((y - OY) / PITCH))
     return max(0, min(COLS - 1, c)), max(0, min(ROWS - 1, r))
 
 
-def neighborhood(c: int, r: int, radius: int):
+def neighborhood(c, r, radius):
     cells = []
     for dr in range(-radius, radius + 1):
         for dc in range(-radius, radius + 1):
@@ -109,22 +134,7 @@ def neighborhood(c: int, r: int, radius: int):
     return cells
 
 
-def letter_centers():
-    x1 = OX + 56
-    y1 = OY + GRID_H * 0.42
-    x2 = OX + GRID_W * 0.80
-    y2 = OY + GRID_H * 0.72
-    pts = []
-    for i in range(len(LINE1)):
-        pts.append((x1 + (i + 0.5) * ADV1, y1))
-    n2 = len(LINE2)
-    for i in range(n2):
-        pts.append((x2 - (n2 - i - 0.5) * ADV2, y2))
-    return pts
-
-
 def assign_cubes(rng):
-    """Map grid cell -> (fill_time, level color). First letter to claim a cell wins."""
     start = convert_start()
     taken = set()
     assigned = {}
@@ -142,81 +152,120 @@ def assign_cubes(rng):
     return assigned
 
 
-def type_line(text, start_s, index0, total, preview):
-    conv = convert_start()
-    parts = []
-    for i, ch in enumerate(text):
-        if preview == "cubes":
-            op, anim = "0", ""
-        elif preview == "hold":
-            op, anim = str(REST), ""
-        else:
-            op = str(REST)
-            anim = letter_in_out(start_s + i * CHAR_IN, conv + (index0 + i) * CHAR_OUT, total)
-        parts.append(f'<tspan opacity="{op}">{escape(ch)}{anim}</tspan>')
-    return "".join(parts)
+def letter_css(g, total):
+    i = g["index"]
+    appear = pct(g["appear"], total)
+    on = pct(g["appear"] + 0.02, total)
+    out = pct(convert_start() + i * CHAR_OUT, total)
+    off = pct(convert_start() + i * CHAR_OUT + 0.02, total)
+    if on <= appear:
+        on = min(100.0, appear + 0.05)
+    if out <= on:
+        out = min(100.0, on + 0.05)
+    if off <= out:
+        off = min(100.0, out + 0.05)
+    return (
+        f"    @keyframes L{i} {{\n"
+        f"      0%, {appear:.2f}% {{ opacity: 0; }}\n"
+        f"      {on:.2f}%, {out:.2f}% {{ opacity: {REST}; }}\n"
+        f"      {off:.2f}%, 100% {{ opacity: 0; }}\n"
+        f"    }}\n"
+        f"    .L{i} {{ animation: L{i} {total:.2f}s linear infinite; }}\n"
+    )
+
+
+def cube_css(idx, at_s, color, total):
+    t = pct(at_s, total)
+    on = pct(at_s + 0.08, total)
+    hold = pct(convert_end() + CUBE_HOLD, total)
+    reset = pct(convert_end() + CUBE_HOLD + 0.2, total)
+    if on <= t:
+        on = min(100.0, t + 0.05)
+    if hold <= on:
+        hold = min(100.0, on + 0.05)
+    if reset <= hold:
+        reset = min(100.0, hold + 0.05)
+    return (
+        f"    @keyframes C{idx} {{\n"
+        f"      0%, {t:.2f}% {{ fill: {CUBE}; fill-opacity: {CUBE_OPACITY}; }}\n"
+        f"      {on:.2f}%, {hold:.2f}% {{ fill: {color}; fill-opacity: 1; }}\n"
+        f"      {reset:.2f}%, 100% {{ fill: {CUBE}; fill-opacity: {CUBE_OPACITY}; }}\n"
+        f"    }}\n"
+        f"    .C{idx} {{ animation: C{idx} {total:.2f}s linear infinite; }}\n"
+    )
 
 
 def build(preview=None):
     rng = random.Random(SEED)
     fills = assign_cubes(rng)
     total = total_s()
-    freeze = preview is not None
+    letters = glyphs()
 
-    cubes = []
+    css = [
+        "    text { font-family: Menlo, 'SF Mono', Monaco, ui-monospace, monospace; }",
+    ]
+    if preview is None:
+        for g in letters:
+            css.append(letter_css(g, total).rstrip())
+
+    cube_class = {}
+    idx = 0
+    for cell, (at_s, color) in sorted(fills.items()):
+        cube_class[cell] = (f"C{idx}", color)
+        if preview is None:
+            css.append(cube_css(idx, at_s, color, total).rstrip())
+        idx += 1
+
+    lines = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+        f'viewBox="0 0 {W} {H}" role="img" '
+        f'aria-label="hi there! welcome to seb\'s portfolio">',
+        "  <!-- generated by scripts/build_header.py — animation lives here -->",
+        "  <style>",
+        *css,
+        "  </style>",
+        f'  <rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="8" '
+        f'fill="{CARD}" stroke="{BORDER}" stroke-width="1"/>',
+        '  <g id="letters">',
+    ]
+
+    if preview != "cubes":
+        for g in letters:
+            op = REST
+            cls = "glyph" if preview else f"glyph L{g['index']}"
+            lines.append(
+                f'    <text class="{cls}" x="{g["x"]:.1f}" y="{g["y"]:.1f}" '
+                f'text-anchor="start" dominant-baseline="middle" '
+                f'font-size="{g["size"]}" fill="{g["fill"]}" opacity="{op}">'
+                f'{escape(g["ch"])}</text>'
+            )
+
+    lines.append("  </g>")
+    lines.append('  <g id="grid">')
+
     for r in range(ROWS):
         for c in range(COLS):
             x = OX + c * PITCH
             y = OY + r * PITCH
-            event = fills.get((c, r))
+            event = cube_class.get((c, r))
             if preview == "cubes" and event:
-                cubes.append(
-                    f'<rect x="{x:.1f}" y="{y:.1f}" width="{SIZE}" height="{SIZE}" '
+                lines.append(
+                    f'    <rect x="{x:.1f}" y="{y:.1f}" width="{SIZE}" height="{SIZE}" '
                     f'rx="{RX}" fill="{event[1]}" fill-opacity="1" '
                     f'stroke="{CUBE_STROKE}" stroke-width="0.8"/>'
                 )
                 continue
-            anim = ""
-            if not freeze and event:
-                anim = cube_fill_anim(event[0], event[1], total)
-            cubes.append(
-                f'<rect x="{x:.1f}" y="{y:.1f}" width="{SIZE}" height="{SIZE}" '
+            cls = f' class="{event[0]}"' if (preview is None and event) else ""
+            lines.append(
+                f'    <rect{cls} x="{x:.1f}" y="{y:.1f}" width="{SIZE}" height="{SIZE}" '
                 f'rx="{RX}" fill="{CUBE}" fill-opacity="{CUBE_OPACITY}" '
-                f'stroke="{CUBE_STROKE}" stroke-width="0.8">{anim}</rect>'
+                f'stroke="{CUBE_STROKE}" stroke-width="0.8"/>'
             )
 
-    x1 = OX + 56
-    y1 = OY + GRID_H * 0.42
-    x2 = OX + GRID_W * 0.80
-    y2 = OY + GRID_H * 0.72
-    t2 = START_S + len(LINE1) * CHAR_IN + LINE_PAUSE
-
-    text = []
-    if preview != "cubes":
-        text = [
-            f'<text x="{x1:.1f}" y="{y1:.1f}" text-anchor="start" '
-            f'dominant-baseline="middle" xml:space="preserve" '
-            f'font-family="{FONT}" font-size="{SIZE1}" font-weight="400" fill="{TEXT}">'
-            f"{type_line(LINE1, START_S, 0, total, preview)}</text>",
-            f'<text x="{x2:.1f}" y="{y2:.1f}" text-anchor="end" '
-            f'dominant-baseline="middle" xml:space="preserve" '
-            f'font-family="{FONT}" font-size="{SIZE2}" font-weight="400" fill="{MUTED}">'
-            f"{type_line(LINE2, t2, len(LINE1), total, preview)}</text>",
-        ]
-
-    return "\n".join(
-        [
-            f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
-            f'viewBox="0 0 {W} {H}" role="img" '
-            f'aria-label="hi there! welcome to seb\'s portfolio">',
-            f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="8" '
-            f'fill="{CARD}" stroke="{BORDER}" stroke-width="1"/>',
-            *text,
-            *cubes,
-            "</svg>",
-            "",
-        ]
-    )
+    lines.append("  </g>")
+    lines.append("</svg>")
+    lines.append("")
+    return "\n".join(lines)
 
 
 def main():
@@ -224,7 +273,7 @@ def main():
     OUT.write_text(build(preview=preview))
     print(
         f"wrote {OUT} ({OUT.stat().st_size} bytes) "
-        f"once={total_s():.1f}s in={CHAR_IN}s out={CHAR_OUT}s"
+        f"loop={total_s():.1f}s in={CHAR_IN}s out={CHAR_OUT}s css-loop"
     )
 
 
