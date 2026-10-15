@@ -1,10 +1,12 @@
-<div align="center">
-  <img src="assets/profile-header.svg" alt="hi there! welcome to seb's portfolio" />
+<div align="center" style="margin-top:-20px;margin-bottom:0">
+  <img src="assets/profile-header.svg" width="880" height="192" alt="hi there! welcome to seb's portfolio" />
 </div>
 
-`› currently:` reading · training · traveling · automating something that probably didn't need automating
+I build data you can rerun and check.
 
-[sebavaspim@gmail.com](mailto:sebavaspim@gmail.com) · [linkedin.com/in/sebastianvaskes](https://www.linkedin.com/in/sebastianvaskes)
+<div style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:14px;line-height:1.6;margin:4px 0 1.25em 0">
+  <span style="color:#a78bfa">$ stack</span><span style="color:#8b949e">    python · sql · postgresql · excel · docker</span>
+</div>
 
 ## Selected work
 
@@ -25,3 +27,8 @@
 **[Macro Stress & Asset Behavior](https://github.com/sebmvp/macro-asset-stress-modeling)** — CompSci 390B research. Gold is a conditional safe haven; Bitcoin is not digital gold. I worked on model design, training, evaluation, and comparison.
 
 A pipeline you can't rerun safely is a liability with a scheduler.
+
+<p style="margin-top:28px">
+  <a href="mailto:sebavaspim@gmail.com"><img src="assets/icon-email.svg" height="22" alt="Email Seb" /></a>&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/sebastianvaskes"><img src="assets/icon-linkedin.svg" height="22" alt="Seb on LinkedIn" /></a>
+</p>
