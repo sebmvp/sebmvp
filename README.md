@@ -21,8 +21,6 @@
 
 **[Macro Stress & Asset Behavior](https://github.com/sebmvp/macro-asset-stress-modeling)** — CompSci 390B research. Gold is a conditional safe haven; Bitcoin is not digital gold. I worked on model design, training, evaluation, and comparison.
 
-A pipeline you can't rerun safely is a liability with a scheduler.
-
 <p align="center">
   <a href="mailto:sebavaspim@gmail.com"><img src="assets/icon-email.svg" height="28" alt="Email Seb" /></a>&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/sebastianvaskes"><img src="assets/icon-linkedin.svg" height="28" alt="Seb on LinkedIn" /></a>
