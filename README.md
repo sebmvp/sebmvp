@@ -1,12 +1,10 @@
-<div align="center" style="margin-top:-20px;margin-bottom:0">
+<div align="center">
   <img src="assets/profile-header.svg" width="880" height="192" alt="hi there! welcome to seb's portfolio" />
 </div>
 
 I build data you can rerun and check.
 
-<div style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:14px;line-height:1.6;margin:4px 0 1.25em 0">
-  <span style="color:#a78bfa">$ stack</span><span style="color:#8b949e">    python · sql · postgresql · excel · docker</span>
-</div>
+<img src="assets/stack-line.svg" alt="$ stack    python · sql · postgresql · excel · docker" height="22" />
 
 ## Selected work
 
@@ -28,7 +26,7 @@ I build data you can rerun and check.
 
 A pipeline you can't rerun safely is a liability with a scheduler.
 
-<p style="margin-top:28px">
+<p>
   <a href="mailto:sebavaspim@gmail.com"><img src="assets/icon-email.svg" height="22" alt="Email Seb" /></a>&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/sebastianvaskes"><img src="assets/icon-linkedin.svg" height="22" alt="Seb on LinkedIn" /></a>
 </p>

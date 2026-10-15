@@ -15,7 +15,9 @@ RX = 2
 GRID_W = COLS * PITCH - GAP
 GRID_H = ROWS * PITCH - GAP
 OX = (W - GRID_W) / 2
-OY = (H - GRID_H) / 2
+# GitHub strips README negative-margin, so sit the grid ~16px higher
+# in the 880x192 canvas instead of cropping it.
+OY = (H - GRID_H) / 2 - 16
 
 # Empty cells use GitHub contribution colors. Fill stays see-through so
 # the type reads; the lattice comes from a quiet stroke, not a card.
