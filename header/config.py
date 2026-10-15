@@ -1,11 +1,11 @@
-"""Geometry, copy, and palette. Grid matches aouellets/Platane snk 880x192."""
+"""Geometry, copy, and palette. Grid matches aouellets/Platane snk: 53x7, 12px/4px."""
 
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets/profile-header.svg"
 
-W, H = 880, 192
+W = 880
 COLS, ROWS = 53, 7
 # GitHub's last week is incomplete (not a full rectangle). Snake enters here.
 LAST_WEEK_DAYS = 3
@@ -15,9 +15,10 @@ RX = 2
 GRID_W = COLS * PITCH - GAP
 GRID_H = ROWS * PITCH - GAP
 OX = (W - GRID_W) / 2
-# GitHub strips README negative-margin, so sit the grid ~16px higher
-# in the 880x192 canvas instead of cropping it.
-OY = (H - GRID_H) / 2 - 16
+# Hug the grid. GitHub strips CSS margin, so height — not empty canvas —
+# is what sits the snake near the README top and the stack under it.
+OY = 10
+H = OY + GRID_H + 8
 
 # Empty cells use GitHub contribution colors. Fill stays see-through so
 # the type reads; the lattice comes from a quiet stroke, not a card.

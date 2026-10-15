@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="24" viewBox="0 0 640 24" role="img" aria-label="$ stack python sql postgresql excel docker">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="20" viewBox="0 0 880 20" role="img" aria-label="$ stack python sql postgresql excel docker">
   <style>
-    .p, .r { font: 14px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .p, .r { font: 13px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
     .p { fill: #a78bfa; }
     .r { fill: #656d76; }
     @media (prefers-color-scheme: dark) {
       .r { fill: #8b949e; }
     }
   </style>
-  <text x="0" y="17"><tspan class="p">$ stack</tspan><tspan class="r">    python · sql · postgresql · excel · docker</tspan></text>
+  <text x="18" y="15" xml:space="preserve"><tspan class="p">$ stack</tspan><tspan class="r">    python · sql · postgresql · excel · docker</tspan></text>
 </svg>
